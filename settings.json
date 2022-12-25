@@ -1,0 +1,5 @@
+{
+    "button_text":"Button",
+    "confirmation_text":"Sent request for",
+    "webhook_url":"https://example.com/api/webhook/123abcABC"
+}
