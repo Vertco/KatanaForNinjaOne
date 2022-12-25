@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trigger for NinjaOne</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="popup-dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="popup-light.css" media="(prefers-color-scheme: light)">
+    </head>
+    <body>
+        <div id="wrapper" class="wrapper">
+            <div id="notification" class="notification">Saved</div>
+            <div class="content">
+                <img class="logo" id="logo" height="60" src="Trigger_Logo_Light.png">
+                <div class=form>
+                    <div>
+                        <b>Button text</b>
+                        <input class="textfield" id="button_text" type="text" spellcheck="false" placeholder="Button text">
+                    </div>
+                    <div>
+                        <b>Warning text</b>
+                        <input class="textfield" id="warning_text" type="text" spellcheck="false" placeholder="Warning text">
+                    </div>
+                    <div>
+                        <b>Webhook URL</b>
+                        <input class="textfield" id="webhook_url" type="text" spellcheck="false" placeholder="Webhook URL">
+                    </div>
+                    <div>
+                        <ul>
+                            <li><button class="save_button filled_button" id="save_button" type="button"><b>Save</b></button></li>
+                            <li><div class="hollow_button"><input type="file" id="import_button">Import</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="popup.js"></script>
+</html>
