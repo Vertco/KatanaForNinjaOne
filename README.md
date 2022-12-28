@@ -14,9 +14,8 @@ With this extension you can add a button to the [NinjaOne](https://www.ninjaone.
 From there you can integrate it into any program you want.
 Below we'll show you how to run an action in Microsoft Power Automate for example.
 
-The extension will be available in the Microsoft Edge Add-on store and Google Chrome webstore, but for now will need to be installed manually using a zip of the bin folder.<br>
-Follow the link for your browser of choice on detailed steps how to do this:<br>
-[Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)<br>
+The extension is available in the [Microsoft Edge Add-on store](https://microsoftedge.microsoft.com/addons/detail/trigger-for-ninjaone/elakkmlooholefhpllcioobeepoombdn), but not yet in the Google Chrome webstore, but for now will need to be installed manually using a zip of the bin folder.<br>
+Follow the link for a guide on how to set up the extension in chrome:<br>
 [Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 
 ---
