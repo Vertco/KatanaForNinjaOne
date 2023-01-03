@@ -1,13 +1,12 @@
 {
     "name": "Trigger for NinjaOne",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "manifest_version": 3,
     "description": "This extension extends the functionality of NinjaOne.",
     "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self'"
     },
     "permissions": [
-        "tabs",
         "storage"
       ],
       "host_permissions": [
