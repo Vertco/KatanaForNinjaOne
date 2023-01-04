@@ -21,6 +21,9 @@ function reloadfields() {
 function show_notification() {
   const button = document.querySelector(".notification");
   button.style.display = "block"
+  // Hide notification
+  var strCmd = "document.querySelector('.notification').style.display = 'none'";
+  var hideTimer = setTimeout(strCmd, 2000);
 };
 
 // Function | Show debug
