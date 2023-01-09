@@ -18,13 +18,25 @@ function reloadfields() {
 };
 
 // Function | Show notification
-function show_notification() {
-  const button = document.querySelector(".notification");
-  button.style.display = "block"
-  // Hide notification
-  var strCmd = "document.querySelector('.notification').style.display = 'none'";
-  var hideTimer = setTimeout(strCmd, 2000);
-};
+function show_notification(message) {
+  // Get the element to display the notification
+  const notificationElement = document.querySelector('.notification');
+
+  // Update the content of the element
+  notificationElement.innerHTML = message;
+
+  // Show the notification
+  notificationElement.style.display = 'block';
+}
+
+// Function | Hide notification
+function hide_notification() {
+  // Get the element to hide
+  const notificationElement = document.querySelector('.notification');
+  
+  // Hide the element
+  notificationElement.style.display = 'none';
+}
 
 // Function | Show debug
 function show_debug() {
@@ -67,8 +79,9 @@ document.querySelector('.save_button').addEventListener('click', function() {
       webhook_url: document.getElementById("webhook_url").value
   }).then(() => {
       console.debug("Saved settings");
+      show_notification("Saved settings!")
+      setTimeout(hide_notification, 1500);
   });
-  show_notification();
 });
 
 // Import data from JSON
@@ -85,5 +98,7 @@ fileInput.addEventListener('change', () => {
     reloadfields();
   };
   reader.readAsText(file);
-  show_notification();
+  console.debug("Saved settings");
+  show_notification("Saved settings!");
+  setTimeout(hide_notification, 1500);
 });
