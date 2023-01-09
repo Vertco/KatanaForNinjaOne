@@ -51,6 +51,18 @@ function hide_debug() {
   body.style.border = ""
 };
 
+// Function | Export settings
+function exportSettings() {
+  chrome.storage.sync.get(null, (settings) => {
+    var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(settings, null, 2));
+    var a = document.createElement('a');
+    a.href = 'data:' + data;
+    a.download = 'settings.json';
+    a.innerHTML = 'download JSON';
+    a.click();
+  });
+}
+
 // Load and set value of all settings fields
 reloadfields()
 
@@ -101,5 +113,12 @@ fileInput.addEventListener('change', () => {
   reader.readAsText(file);
   console.debug("Imported and saved settings");
   show_notification("Imported and saved settings", "#337ab7");
+  setTimeout(hide_notification, 1500);
+});
+
+// Export data to JSON
+document.getElementById('export_button').addEventListener('click', function() {
+  exportSettings();
+  show_notification('Exported settings to settings.json');
   setTimeout(hide_notification, 1500);
 });
