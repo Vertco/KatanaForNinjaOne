@@ -4,7 +4,7 @@
   "manifest_version": 3,
   "description": "This extension extends the functionality of NinjaOne.",
   "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src https: 'self'"
   },
   "browser_specific_settings": {
     "gecko": {
