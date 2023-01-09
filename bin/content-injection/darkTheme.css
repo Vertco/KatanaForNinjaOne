@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #181a1b;
+        --accent-bg-color: #1c1f20;
+        --accent-bg-light-color: #1f2223;
+        --main-text-color: #737777;
+        --main-text-light-color: #bbbbbb;
+        --accent-text-color: #69a6d5;
+        --main-border-color: #3a3e41;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--main-text-light-color) !important;
+    }
+
+    .css-96173j,
+    .eewj1m90,
+    .css-1ibgz1r,
+    .css-6slmsw {
+        color: var(--main-text-light-color) !important
+    }
+
+    body,
+    #page-wrapper,
+    .activity-list,
+    .ReactVirtualized__List,
+    .activity,
+    .css-1083lv8,
+    .css-p598dj-control {
+        background-color: var(--main-bg-color) !important;
+        color: var(--main-text-color) !important;
+    }
+
+    .form-control,
+    .single-line,
+    .css-p598dj-control {
+        background-color: var(--main-bg-color) !important;
+        border-color: var(--main-border-color) !important;
+    }
+
+    .panel,
+    .panel-default>.panel-heading,
+    #footer,
+    .activity-list,
+    .ReactVirtualized__List,
+    .activity {
+        background-color: var(--main-bg-color) !important;
+        border-color: var(--main-border-color) !important;
+    }
+
+    body.theme-two #application-sidebar nav>.active,
+    body.theme-two #application-sidebar nav>:focus,
+    body.theme-two #application-sidebar nav>:hover {
+        background-color: var(--accent-bg-light-color) !important;
+    }
+
+    .css-10b66mg,
+    .css-10b66mg:hover,
+    .css-10b66mg:focus,
+    #application-sidebar {
+        background-color: var(--accent-bg-color) !important;
+    }
+
+    .css-1083lv8::after {
+        background-color: var(--main-border-color) !important;
+    }
+}
