@@ -18,7 +18,7 @@ function reloadfields() {
 };
 
 // Function | Show notification
-function show_notification(message) {
+function show_notification(message, color) {
   // Get the element to display the notification
   const notificationElement = document.querySelector('.notification');
 
@@ -27,6 +27,7 @@ function show_notification(message) {
 
   // Show the notification
   notificationElement.style.display = 'block';
+  notificationElement.style.backgroundColor = color;
 }
 
 // Function | Hide notification
@@ -79,7 +80,7 @@ document.querySelector('.save_button').addEventListener('click', function() {
       webhook_url: document.getElementById("webhook_url").value
   }).then(() => {
       console.debug("Saved settings");
-      show_notification("Saved settings!")
+      show_notification("Saved settings", "#337ab7")
       setTimeout(hide_notification, 1500);
   });
 });
@@ -98,7 +99,7 @@ fileInput.addEventListener('change', () => {
     reloadfields();
   };
   reader.readAsText(file);
-  console.debug("Saved settings");
-  show_notification("Saved settings!");
+  console.debug("Imported and saved settings");
+  show_notification("Imported and saved settings", "#337ab7");
   setTimeout(hide_notification, 1500);
 });
