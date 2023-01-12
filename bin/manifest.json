@@ -1,5 +1,5 @@
 {
-  "name": "Trigger for NinjaOne",
+  "name": "Trigger+ for NinjaOne",
   "version": "0.9.1",
   "manifest_version": 3,
   "description": "This extension extends the functionality of NinjaOne.",
@@ -16,10 +16,10 @@
     "storage"
   ],
   "icons": {
-    "16": "icons/Trigger_Favicon_16.png",
-    "32": "icons/Trigger_Favicon_32.png",
-    "48": "icons/Trigger_Favicon_48.png",
-    "128": "icons/Trigger_Favicon_128.png"
+    "16": "icons/Trigger+_Favicon_16.png",
+    "32": "icons/Trigger+_Favicon_32.png",
+    "48": "icons/Trigger+_Favicon_48.png",
+    "128": "icons/Trigger+_Favicon_128.png"
   },
   "action": {
     "default_popup": "popup/popup.html"
