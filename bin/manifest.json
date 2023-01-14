@@ -40,7 +40,9 @@
         "lib/jquery.min.js",
         "content-injection/injectButton.js"
       ],
-      "css": ["content-injection/darkTheme.css"],
+      "css": [
+        "content-injection/darkTheme.css"
+      ],
       "run_at": "document_start"
     }
   ]
