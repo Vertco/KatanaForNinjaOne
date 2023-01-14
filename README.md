@@ -73,7 +73,7 @@ Note that adding any data from the previous `NinjaOne - List devices (detailed)`
 Set this URL as the Webhook URL field in the extension.
 
 Now, whenever you click on the Trigger button in NinjaOne, you will receive an email with that devices' details.
-This in itself is obviously not the most usefull funcitonality, but by changing the flow you can make the button do anything, for example:
+This in itself is obviously not the most useful functionality, but by changing the flow you can make the button do anything, for example:
 - Print labels for devices
 - Store device details in a 3rd party Inventory management system
 - Create a device specific ticket in a 3rd party ticketing system
