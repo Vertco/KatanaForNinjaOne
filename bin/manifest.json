@@ -1,6 +1,6 @@
 {
-  "name": "Trigger for NinjaOne",
-  "version": "0.8.2",
+  "name": "Trigger+ for NinjaOne",
+  "version": "0.9.1",
   "manifest_version": 3,
   "description": "This extension extends the functionality of NinjaOne.",
   "content_security_policy": {
@@ -16,14 +16,31 @@
     "storage"
   ],
   "icons": {
-    "16": "icons/Trigger_Favicon_16.png",
-    "32": "icons/Trigger_Favicon_32.png",
-    "48": "icons/Trigger_Favicon_48.png",
-    "128": "icons/Trigger_Favicon_128.png"
+    "16": "icons/Trigger+_Favicon_16.png",
+    "32": "icons/Trigger+_Favicon_32.png",
+    "48": "icons/Trigger+_Favicon_48.png",
+    "128": "icons/Trigger+_Favicon_128.png"
   },
   "action": {
     "default_popup": "popup/popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/resources/*"
+      ],
+      "matches": [
+        "https://eu.ninjarmm.com/*",
+        "https://*.rmmservice.eu/*",
+        "https://app.ninjarmm.com/*",
+        "https://*.rmmservice.com/*",
+        "https://oc.ninjarmm.com/*",
+        "https://*.rmmservice.com.au/*",
+        "https://ca.ninjarmm.com/*",
+        "https://*.rmmservice.ca/*"
+      ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -31,14 +48,16 @@
         "https://*.rmmservice.eu/*",
         "https://app.ninjarmm.com/*",
         "https://*.rmmservice.com/*",
-        "https://oc.ninjarmm.com/",
+        "https://oc.ninjarmm.com/*",
         "https://*.rmmservice.com.au/*",
         "https://ca.ninjarmm.com/*",
         "https://*.rmmservice.ca/*"
       ],
       "js": [
         "lib/jquery.min.js",
-        "content-scripts/content.js"
+        "content-injection/trigger+_functions.js",
+        "content-injection/trigger+_trigger_button.js",
+        "content-injection/trigger+_theme_button.js"
       ],
       "run_at": "document_start"
     }

@@ -1,5 +1,5 @@
 chrome.storage.sync.get(["debug"]).then((result) => {
-  if(result.debug) {
+  if (result.debug) {
     show_debug()
   } else {
     hide_debug()
@@ -34,7 +34,7 @@ function show_notification(message, color) {
 function hide_notification() {
   // Get the element to hide
   const notificationElement = document.querySelector('.notification');
-  
+
   // Hide the element
   notificationElement.style.display = 'none';
 }
@@ -69,31 +69,31 @@ reloadfields()
 // Enable debug mode after clicking on the logo 5 times
 var counter = 0;
 
-document.querySelector('.logo').addEventListener('click', function() {
+document.querySelector('.logo').addEventListener('click', function () {
   counter++;
   if (counter === 10) {
     debugLoad = chrome.storage.sync.get(["debug"]).then((result) => {
-      if(!result.debug) {
+      if (!result.debug) {
         show_debug()
       } else {
         hide_debug()
       }
-      chrome.storage.sync.set({"debug": !result.debug});
+      chrome.storage.sync.set({ "debug": !result.debug });
       counter = 0;
     })
   }
 });
 
 // Save data when clicking on save button
-document.querySelector('.save_button').addEventListener('click', function() {
+document.querySelector('.save_button').addEventListener('click', function () {
   chrome.storage.sync.set({
-      button_text: document.getElementById("button_text").value,
-      warning_text: document.getElementById("warning_text").value,
-      webhook_url: document.getElementById("webhook_url").value
+    button_text: document.getElementById("button_text").value,
+    warning_text: document.getElementById("warning_text").value,
+    webhook_url: document.getElementById("webhook_url").value
   }).then(() => {
-      console.debug("Saved settings");
-      show_notification("Saved settings", "#337ab7")
-      setTimeout(hide_notification, 1500);
+    console.debug("Saved settings");
+    show_notification("Saved settings", "#337ab7")
+    setTimeout(hide_notification, 1500);
   });
 });
 
@@ -117,7 +117,7 @@ fileInput.addEventListener('change', () => {
 });
 
 // Export data to JSON
-document.getElementById('export_button').addEventListener('click', function() {
+document.getElementById('export_button').addEventListener('click', function () {
   exportSettings();
   show_notification('Exported settings to settings.json');
   setTimeout(hide_notification, 1500);

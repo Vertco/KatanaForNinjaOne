@@ -1,0 +1,14 @@
+html {
+    filter: invert(90%) hue-rotate(180deg) saturate(3);
+}
+
+img,
+picture,
+video,
+path {
+    filter: invert(100%) hue-rotate(180deg) saturate(.6);
+}
+
+a {
+    filter: saturate(.25);
+}
