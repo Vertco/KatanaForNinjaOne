@@ -18,7 +18,7 @@ function addTriggerButton() {
             $("#device-tab-header > div > header > nav > a:nth-child(" + navChildren + ")").remove();
             chrome.storage.sync.get(["button_text"]).then((result) => {
                 $("#device-tab-header > div > header > nav").append(
-                    `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.button_text + ` <sup>Trigger</div></div></a>`
+                    `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.button_text + ` <sup>Trigger+</div></div></a>`
                 );
                 console.debug(`Inserted button with id ${id}`);
             });
