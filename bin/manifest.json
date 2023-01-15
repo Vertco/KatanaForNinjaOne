@@ -24,6 +24,23 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/resources/*"
+      ],
+      "matches": [
+        "https://eu.ninjarmm.com/*",
+        "https://*.rmmservice.eu/*",
+        "https://app.ninjarmm.com/*",
+        "https://*.rmmservice.com/*",
+        "https://oc.ninjarmm.com/*",
+        "https://*.rmmservice.com.au/*",
+        "https://ca.ninjarmm.com/*",
+        "https://*.rmmservice.ca/*"
+      ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [
@@ -31,17 +48,16 @@
         "https://*.rmmservice.eu/*",
         "https://app.ninjarmm.com/*",
         "https://*.rmmservice.com/*",
-        "https://oc.ninjarmm.com/",
+        "https://oc.ninjarmm.com/*",
         "https://*.rmmservice.com.au/*",
         "https://ca.ninjarmm.com/*",
         "https://*.rmmservice.ca/*"
       ],
       "js": [
         "lib/jquery.min.js",
-        "content-injection/injectButton.js"
-      ],
-      "css": [
-        "content-injection/darkTheme.css"
+        "content-injection/trigger+_functions.js",
+        "content-injection/trigger+_trigger_button.js",
+        "content-injection/trigger+_theme_button.js"
       ],
       "run_at": "document_start"
     }
