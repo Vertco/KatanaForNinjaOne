@@ -1,3 +1,28 @@
+// Function | Localize HTML Page
+function localizeHtmlPage()
+{
+    //Localize by replacing __MSG_***__ meta tags
+    var objects = document.getElementsByTagName('html');
+    for (var j = 0; j < objects.length; j++)
+    {
+        var obj = objects[j];
+
+        var valStrH = obj.innerHTML.toString();
+        var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function(match, v1)
+        {
+            return v1 ? chrome.i18n.getMessage(v1) : "";
+        });
+
+        if(valNewH != valStrH)
+        {
+            obj.innerHTML = valNewH;
+        }
+    }
+}
+
+// This will replace all the __MSG_***__ tags in all HTML pages, and perform the translation
+localizeHtmlPage();
+
 chrome.storage.sync.get(["debug"]).then((result) => {
   if (result.debug) {
     show_debug()
@@ -92,7 +117,7 @@ document.querySelector('.save_button').addEventListener('click', function () {
     webhook_url: document.getElementById("webhook_url").value
   }).then(() => {
     console.debug("Saved settings");
-    show_notification("Saved settings", "#337ab7")
+    show_notification(chrome.i18n.getMessage("NOT_saved"), "#337ab7")
     setTimeout(hide_notification, 1500);
   });
 });
@@ -105,20 +130,20 @@ fileInput.addEventListener('change', () => {
   reader.onload = function () {
     var settings = JSON.parse(this.result);
     chrome.storage.sync.set(settings, () => {
-      console.debug('Settings saved');
+      console.debug("Settings saved");
       console.debug(settings)
     });
     reloadfields();
   };
   reader.readAsText(file);
   console.debug("Imported and saved settings");
-  show_notification("Imported and saved settings", "#337ab7");
+  show_notification(chrome.i18n.getMessage("NOT_importSaved"), "#337ab7");
   setTimeout(hide_notification, 1500);
 });
 
 // Export data to JSON
-document.getElementById('export_button').addEventListener('click', function () {
+document.getElementById("export_button").addEventListener('click', function () {
   exportSettings();
-  show_notification('Exported settings to settings.json');
+  show_notification(chrome.i18n.getMessage("NOT_export"));
   setTimeout(hide_notification, 1500);
 });

@@ -1,0 +1,40 @@
+{
+    "appName": {
+        "message": "Trigger+ voor NinjaOne",
+        "description": "The name of the extension, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "Deze uitbreiding vergroot de functionaliteit van NinjaOne.",
+        "description": "The description of the extension, displayed in the web store."
+    },
+    "INP_buttonText": {
+        "message": "Knop tekst",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_warningText": {
+        "message": "Waarschuwing text",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_webhookURL": {
+        "message": "Webhook URL",
+        "description": "The name and placeholder of the input field."
+    },
+    "BTN_save": {
+        "message": "Opslaan"
+    },
+    "BTN_import": {
+        "message": "Importeren"
+    },
+    "BTN_export": {
+        "message": "Exporteren"
+    },
+    "NOT_saved": {
+        "message": "Instellingen opgeslagen"
+    },
+    "NOT_importSaved": {
+        "message": "Instellingen geïmporteerd en opgeslagen"
+    },
+    "NOT_export": {
+        "message": "Instellingen geëxporteerd naar settings.json"
+    }
+}
