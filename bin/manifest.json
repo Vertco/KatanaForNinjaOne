@@ -1,8 +1,9 @@
 {
-  "name": "Trigger+ for NinjaOne",
+  "name": "__MSG_appName__",
   "version": "0.9.0",
   "manifest_version": 3,
-  "description": "This extension extends the functionality of NinjaOne.",
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src https: 'self'"
   },
