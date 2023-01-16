@@ -1,4 +1,4 @@
-![Large_promotional_tile](https://user-images.githubusercontent.com/47614276/209482608-55a4c24e-88a6-4f10-979c-bd6a42500c89.png)
+![Large_promotional_tile](https://user-images.githubusercontent.com/47614276/212768576-f2767907-2508-4f08-86b9-d76979564b05.png)
 <p align="center">
   <a href="https://www.paypal.com/donate/?hosted_button_id=PLM7Q4RRJK48N" target="_blank">
     <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"/>
@@ -7,12 +7,14 @@
 
 ---
 
-# Trigger for NinjaOne
+# Trigger+ for NinjaOne
 This repository houses the Trigger for NinjaOne Chromium extension.
 
 With this extension you can add a button to the [NinjaOne](https://www.ninjaone.com/) UI that sends the current device to a selected endpoint.
 From there you can integrate it into any program you want.
-Below we'll show you how to run an action in Microsoft Power Automate for example.
+In the [Guides section](https://github.com/Vertco/TriggerForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
+
+Since version 0.9.0 it also includes an option to enable dark theme in NinjaOne. This will invert the colors on the page while keeping the colors as close as possible to the original.
 
 The extension is available in the [Microsoft Edge Add-on store](https://microsoftedge.microsoft.com/addons/detail/trigger-for-ninjaone/elakkmlooholefhpllcioobeepoombdn) and in the [Google Chrome webstore](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd).
 
@@ -32,7 +34,8 @@ The settings are stored in a .json file with the content formatted as shown belo
 {
     "button_text":"Button",
     "confirmation_text":"Sent request for",
-    "webhook_url":"https://example.com/api/webhook/123abcABC"
+    "webhook_url":"https://example.com/api/webhook/123abcABC",
+    "darkMode":true
 }
 ```
 [Download](https://raw.githubusercontent.com/Vertco/TriggerForNinjaOne/main/settings.json)
