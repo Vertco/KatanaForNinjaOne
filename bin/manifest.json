@@ -1,17 +1,11 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "manifest_version": 3,
   "default_locale": "en",
   "description": "__MSG_appDesc__",
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src https: 'self'"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "triggerforninjaone@vertc.nl",
-      "strict_min_version": "58.0"
-    }
   },
   "permissions": [
     "storage"
@@ -25,10 +19,13 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
+  "background": {
+    "service_worker": "scripts/background_worker.js"
+  },
   "web_accessible_resources": [
     {
       "resources": [
-        "/resources/*"
+        "resources/*"
       ],
       "matches": [
         "https://eu.ninjarmm.com/*",
@@ -56,9 +53,9 @@
       ],
       "js": [
         "lib/jquery.min.js",
-        "content-injection/trigger+_functions.js",
-        "content-injection/trigger+_trigger_button.js",
-        "content-injection/trigger+_theme_button.js"
+        "scripts/trigger+_functions.js",
+        "scripts/trigger+_trigger_button.js",
+        "scripts/trigger+_theme_button.js"
       ],
       "run_at": "document_start"
     }
