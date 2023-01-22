@@ -53,9 +53,13 @@
       ],
       "js": [
         "lib/jquery.min.js",
+        "scripts/trigger+_variables.js",
         "scripts/trigger+_functions.js",
         "scripts/trigger+_trigger_button.js",
         "scripts/trigger+_theme_button.js"
+      ],
+      "css": [
+        "scripts/themeMenu.css"
       ],
       "run_at": "document_start"
     }

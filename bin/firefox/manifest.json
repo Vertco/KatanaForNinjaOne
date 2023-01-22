@@ -25,11 +25,13 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
-  "workers": "scripts/background_worker.js",
+  "background": {
+    "service_worker": "scripts/background_worker.js"
+  },
   "web_accessible_resources": [
     {
       "resources": [
-        "/resources/*"
+        "resources/*"
       ],
       "matches": [
         "https://eu.ninjarmm.com/*",
@@ -57,9 +59,13 @@
       ],
       "js": [
         "lib/jquery.min.js",
+        "scripts/trigger+_variables.js",
         "scripts/trigger+_functions.js",
         "scripts/trigger+_trigger_button.js",
         "scripts/trigger+_theme_button.js"
+      ],
+      "css": [
+        "scripts/themeMenu.css"
       ],
       "run_at": "document_start"
     }
