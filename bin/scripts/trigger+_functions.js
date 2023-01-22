@@ -18,6 +18,22 @@ function waitForElm(selector) {
     });
 };
 
+function sendRequest() {
+    chrome.storage.sync.get(["warning_text", "confirmation_text"]).then((result) => {
+        var confirm_request = confirm(result.warning_text + ` ${id}?`);
+        if (confirm_request) {
+            chrome.storage.sync.get(["webhook_url", "debug"]).then((result) => {
+                chrome.runtime.sendMessage({
+                    id: id,
+                    webhook_url: result.webhook_url,
+                    debug: result.debug
+                });
+            });
+        }
+    });
+};
+
+/*
 // Function | Send http request
 function sendRequest() {
     chrome.storage.sync.get(["warning_text", "confirmation_text"]).then((result) => {
@@ -40,6 +56,7 @@ function sendRequest() {
         };
     });
 };
+*/
 
 // Function | Enable dark theme
 function enableDarkTheme() {
