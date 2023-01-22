@@ -1,0 +1,19 @@
+.css-theme_button {
+    outline: none;
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    padding: 4px 4px 8px;
+    margin-top: 2px;
+    min-width: 320px;
+    border: 1px solid rgb(225, 226, 228);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    z-index: 5000;
+    box-shadow: rgb(50 50 105 / 15%) 0px 2px 5px 0px, rgb(244 244 245) 0px 1px 1px 0px;
+    user-select: none;
+}
+
+.css-menu-item:hover {
+    background-color: #f5f8fa;
+}

@@ -1,34 +1,32 @@
-// Set variables
-const themeButton = document.createElement("div");
-themeButton.innerHTML = '<div aria-haspopup="true" aria-controls="menu--3" aria-label="Actions" id="menu-button--menu" type="button" data-reach-menu-button=""><span aria-hidden="true"><button type="button" class="css-1x6qs7x e1in0zpt0"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14 fa-fw  css-jsh9fm eu2udwo6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-2V4a8 8 0 1 1 0 16Z" fill="currentColor"/></svg></button></span></div>';
-themeButton.id = "theme_button";
-themeButton.classList.add("dropdown-target", "es5ttc71", "css-1p0oaxl", "e16bvwle2");
+// Load theme on pageload
+loadTheme()
 
-var darkThemeURL = chrome.runtime.getURL("resources/NinjaOneDarkTheme.css");
-console.debug(darkThemeURL)
-var link = document.createElement("link");
-link.setAttribute("rel", "stylesheet");
-link.setAttribute("href", darkThemeURL);
-
-// Load theme settings on page load
-loadDarkTheme();
-
-
-// Add dark theme button
+// Add theme switcher
 waitForElm('#application-topbar > div').then((element) => {
-    element.prepend(themeButton);
+    var showThemeMenu = false;
+    element.prepend(themeSwitcher);
+    var themeButton = document.getElementById("theme-button");
     themeButton.addEventListener('click', function () {
-        chrome.storage.sync.get('darkMode', function (data) {
-            var darkMode = data.darkMode;
-            if (darkMode) {
-                darkMode = false;
-                disableDarkTheme();
-            } else {
-                darkMode = true;
-                enableDarkTheme();
-            }
-            chrome.storage.sync.set({ 'darkMode': darkMode });
-        });
-
+        var themePopup = document.getElementById("theme-menu");
+        if (showThemeMenu) {
+            themePopup.style.display = "none";
+            showThemeMenu = false;
+        } else {
+            themePopup.style.display = "block";
+            showThemeMenu = true;
+        }
+    });
+    
+    var lightThemeButton = document.getElementById("light-theme-button");
+    lightThemeButton.addEventListener('click', function () {
+        setTheme(0);
+    });
+    var darkThemeButton = document.getElementById("dark-theme-button");
+    darkThemeButton.addEventListener('click', function () {
+        setTheme(1);
+    });
+    var autoThemeButton = document.getElementById("auto-theme-button");
+    autoThemeButton.addEventListener('click', function () {
+        setTheme(2);
     });
 });

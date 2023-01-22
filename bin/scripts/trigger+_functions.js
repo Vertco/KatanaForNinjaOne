@@ -1,4 +1,4 @@
-// Function | Wait for element
+// Wait for element
 function waitForElm(selector) {
     return new Promise(resolve => {
         if (document.querySelector(selector)) {
@@ -18,6 +18,16 @@ function waitForElm(selector) {
     });
 };
 
+// Add listener to children
+function addThemeEventListeners(parentSelector) {
+    var parent = document.querySelector(parentSelector);
+    var children = parent.querySelectorAll('#css-menu-item');
+    for (var i = 0; i < children.length; i++) {
+        children[i].addEventListener('click', function () { setTheme(i); });
+    }
+};
+
+// Send HTTP request
 function sendRequest() {
     chrome.storage.sync.get(["warning_text", "confirmation_text"]).then((result) => {
         var confirm_request = confirm(result.warning_text + ` ${id}?`);
@@ -33,53 +43,35 @@ function sendRequest() {
     });
 };
 
-/*
-// Function | Send http request
-function sendRequest() {
-    chrome.storage.sync.get(["warning_text", "confirmation_text"]).then((result) => {
-        var confirm_request = confirm(result.warning_text + ` ${id}?`);
-        if (confirm_request) {
-            chrome.storage.sync.get(["webhook_url", "debug"]).then((result) => {
-                console.debug("Value currently is " + result.webhook_url)
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', result.webhook_url);
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.onload = function () {
-                    console.debug(`Called webhook with id ${id}`);
-                    window.alert(`Request sent succesfully for ${id}.`)
-                };
-                xhr.send(JSON.stringify({
-                    "id": id,
-                    "debug": result.debug
-                }));;
-            });
-        };
-    });
-};
-*/
+// Set theme
+function setTheme(num) {
+    var head = document.getElementsByTagName('head')[0];
+    var triggerThemeLink = document.createElement('link');
+    triggerThemeLink.rel = 'stylesheet';
+    triggerThemeLink.classList.add("trigger_stylesheet");
 
-// Function | Enable dark theme
-function enableDarkTheme() {
-    document.head.appendChild(link);
+    // Remove any existing link elements with the same rel attribute and class
+    var triggerLinks = document.querySelectorAll("link[rel='stylesheet'].trigger_stylesheet");
+    for (var i = 0; i < triggerLinks.length; i++) {
+        head.removeChild(triggerLinks[i]);
+    }
+
+    if (num === 1) {
+        triggerThemeLink.href = chrome.runtime.getURL("resources/NinjaOneDarkTheme.css");
+        chrome.storage.sync.set({ 'theme': 1 });
+    } else if (num === 2) {
+        triggerThemeLink.href = chrome.runtime.getURL("resources/NinjaOneAutoTheme.css");
+        chrome.storage.sync.set({ 'theme': 2 });
+    } else {
+        chrome.storage.sync.set({ 'theme': 0 });
+    }
+    head.appendChild(triggerThemeLink);
 }
 
-// Function | Disable dark theme
-function disableDarkTheme() {
-    if (link) {
-        document.head.removeChild(link);
-    };
-}
-
-// Function | Load theme settings
-function loadDarkTheme() {
-    chrome.storage.sync.get('darkMode', function (data) {
-        var darkMode = data.darkMode;
-        if (darkMode) {
-            document.head.appendChild(link);
-        } else {
-            if (link) {
-                document.head.removeChild(link);
-            };
-        };
+// Load theme settings
+function loadTheme() {
+    chrome.storage.sync.get('theme', function (data) {
+        var theme = data.theme;
+        setTheme(theme)
     });
 };

@@ -1,8 +1,3 @@
-// Set global variables
-var path = window.location.hash.substr(1);
-var idString = path.match(/\d{1,6}/);
-var id = parseInt(idString);
-
 // Function | Add button to NinjaOne device page
 function addTriggerButton() {
     console.debug('Trigger+ Button removed');
