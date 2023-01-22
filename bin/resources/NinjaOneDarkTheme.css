@@ -12,3 +12,7 @@ path {
 a {
     filter: saturate(.25);
 }
+
+.ninja-editor {
+    filter: invert(1) hue-rotate(180deg) saturate(0.5) contrast(1.5);
+}
