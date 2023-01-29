@@ -37,6 +37,8 @@ function sendRequest() {
                     id: id,
                     webhook_url: result.webhook_url,
                     debug: result.debug
+                }, (response) => {
+                    alert(response.body.message)
                 });
             });
         }

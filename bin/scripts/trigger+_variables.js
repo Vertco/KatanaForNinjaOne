@@ -7,4 +7,5 @@ themeSwitcher.classList.add("css-9j9vjq", "eu2udwo8");
 // Trigger+ button
 var path = window.location.hash.substr(1);
 var idString = path.match(/\d{1,6}/);
-var id = parseInt(idString);
+var deviceId = parseInt(idString);
+var deviceDashboards = ["deviceDashboard", "nmsDashboard", "cloudMonitorDashboard", "vmGuestDashboard", "vmDashboard"];
