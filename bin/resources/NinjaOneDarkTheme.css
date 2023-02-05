@@ -13,6 +13,6 @@ a {
     filter: saturate(.25);
 }
 
-.ninja-editor {
+.script-editor-container {
     filter: invert(1) hue-rotate(180deg) saturate(0.5) contrast(1.5);
 }

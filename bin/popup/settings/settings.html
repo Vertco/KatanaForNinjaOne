@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>__MSG_appName__</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="/popup/settings/settings-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/popup-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/settings/settings-light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/popup/popup-light.css" media="(prefers-color-scheme: light)">
+</head>
+
+<div id="notification"></div>
+
+<body>
+    <div class="content">
+        <div class="content-header">
+            <img id="logo" height="60" src="/popup/media/Trigger+_logo_Light.svg">
+            <a href="/popup/home/home.html"><img class="icon" height="24" src="/popup/media/close.svg"></a>
+        </div>
+        <div id="settings-container">
+            <label class="checkbox-container"><img class="icon" height="24" src="/popup/media/darkTheme.svg" />
+                <div>
+                    Theme switcher
+                </div>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container"><img class="icon" height="24" id="triggerFunctionIcon"
+                    src="/popup/media/triggerFunction_Light.svg" />
+                <div>
+                    Trigger button
+                </div>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <div id="trigger-settings">
+                <div class=form>
+                    <div>
+                        <b>__MSG_INP_buttonText__</b>
+                        <input class="textfield" id="button_text" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_buttonText__">
+                    </div>
+                    <div>
+                        <b>__MSG_INP_warningText__</b>
+                        <input class="textfield" id="warning_text" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_warningText__">
+                    </div>
+                    <div>
+                        <b>__MSG_INP_webhookURL__</b>
+                        <input class="textfield" id="webhook_url" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_webhookURL__">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <div class="hollow_button"><input type="file" id="import_button"
+                                        accept=".json">__MSG_BTN_import__</div>
+                            </li>
+                            <li>
+                                <button class="hollow_button" id="export_button"
+                                    type="button">__MSG_BTN_export__</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button class="filled_button" id="save_button" type="button"><b>__MSG_BTN_save__</b></button>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">
+            <a href="https://www.vertc.nl/#about" target="_blank">Made by Vertc<sup>&#169;</sup></a>
+        </div>
+    </div>
+</body>
+<script src="settings.js"></script>
+
+</html>

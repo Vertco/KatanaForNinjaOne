@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>__MSG_appName__</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="/popup/home/home-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/popup-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/home/home-light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/popup/popup-light.css" media="(prefers-color-scheme: light)">
+</head>
+
+<div id="notification"></div>
+<body>
+    <div class="content">
+        <div class="content-header">
+            <img id="logo" height="60" src="/popup/media/Trigger+_logo_Light.svg">
+            <a href="/popup/settings/settings.html"><img class="icon" height="24" src="/popup/media/settings.svg"></a>
+        </div>
+        <div class="functions">
+            <div class="function" height="24">
+                <img class="icon" height="24" src="/popup/media/darkTheme.svg">
+                <div>
+                    Dark theme <a id="theme_module">$status</a>
+                </div>
+            </div>
+            <div class="function" height="24">
+                <img class="icon" id="triggerFunctionIcon" height="24" src="/popup/media/triggerFunction_Light.svg">
+                <div>
+                    Trigger <a id="trigger_module">$status</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">
+            <a href="https://www.vertc.nl/#about" target="_blank">Made by Vertc<sup>&#169;</sup></a>
+        </div>
+    </div>
+</body>
+<script src="home.js"></script>
+
+</html>

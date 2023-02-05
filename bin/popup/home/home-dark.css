@@ -1,0 +1,19 @@
+html {
+    background-color: #3b3b3b;
+    width: 335px;
+    height: 210px;
+}
+
+.functions {
+    padding-top: 15px;
+}
+
+.function {
+    display: flex;
+    gap: 7.5px;
+    padding-bottom: 15px;
+}
+
+.function>div {
+    line-height: 24px;
+}

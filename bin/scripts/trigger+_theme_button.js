@@ -3,7 +3,6 @@ loadTheme()
 
 // Add theme switcher
 waitForElm('#application-topbar > div').then((element) => {
-    var showThemeMenu = false;
     element.prepend(themeSwitcher);
     var themeButton = document.getElementById("theme-button");
     themeButton.addEventListener('click', function () {
@@ -29,4 +28,13 @@ waitForElm('#application-topbar > div').then((element) => {
     autoThemeButton.addEventListener('click', function () {
         setTheme(2);
     });
+});
+
+// Close menu on hash change
+window.addEventListener('hashchange', () => {
+    var themePopup = document.getElementById("theme-menu");
+    if (showThemeMenu) {
+        themePopup.style.display = "none";
+        showThemeMenu = false;
+    }
 });

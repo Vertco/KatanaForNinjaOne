@@ -1,12 +1,13 @@
 body {
     background-color: #3b3b3b;
     font-family: Inter, sans-serif;
-    color: white;
-    width: 330px;
-    height: 320px;
+    font-size: 15px;
+    color: #fff;
     margin: 0px;
+    padding: 15px;
 }
-.notification{
+
+#notification {
     background-color: #337ab7;
     display: none;
     width: 100%;
@@ -15,124 +16,42 @@ body {
     text-align: center;
     font-weight: bold;
     position: absolute;
-    top: 0;
+    float: top;
     z-index: 1;
     color: white;
 }
-.content{
-    padding: 15px;
-    padding-bottom: 5px;
+
+#logo {
+    content: url("media/Trigger+_logo_Dark.svg");
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+
+#triggerFunctionIcon {
+    content: url("/popup/media/triggerFunction_Dark.svg");
 }
-li {
-    float: left;
-    padding-right: 10px;
+
+.content {
+    background-color: #3b3b3b;
 }
-.logo{
-    padding-bottom: 15px;
-    content: url(Trigger+_Logo_Dark.png);
+
+.content-header>a {
+    float: right;
 }
-.form > div{
-    padding-bottom: 10px;
+
+.content-footer {
+    text-align: center;
 }
-.textfield{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: #000000;
-    font-feature-settings: "cv05";
-    box-sizing: border-box;
-    font: inherit;
-    font-family: inherit;
-    height: 30px;
-    line-height: 1.5;
-    box-shadow: none;
-    background-color: #ffffff;
-    background-image: none;
-    border: 1px solid #e1e2e4;
-    color: #616264;
-    display: block;
-    font-size: 13px;
-    padding: 6px 12px;
-    transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
-    width: 100%;
-    border-radius: 3px;
-    margin: 10px 0 0;
-    border-color: #c6c8cc;
-    text-overflow: ellipsis;
+
+.content-footer>a,
+.content-footer>a:link {
+    color: #fff;
+    text-decoration: none;
+    margin: auto;
 }
-.textfield:hover{
-    border-color: #e1e2e4;
+
+.content-footer>a:hover {
+    color: #13d5e1;
 }
-.textfield:active{
-    border-color: #337ab7;
-}
-.filled_button {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: #000000;
-    font-feature-settings: "cv05";
-    box-sizing: border-box;
-    font: inherit;
-    overflow: visible;
-    text-transform: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    user-select: none;
-    outline: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid #337ab7;
-    color: #ffffff;
-    height: auto !important;
-    background-color: #337ab7;
-  }
-.filled_button:hover {
-    background-color: #2f70a8;
-}
-.hollow_button{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-feature-settings: "cv05";
-    box-sizing: border-box;
-    font: inherit;
-    overflow: visible;
-    text-transform: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    user-select: none;
-    outline: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid rgb(225, 226, 228);
-    color: #ffffff;
-    height: auto !important;
-    background-color: #00000000;
-    position: relative;
-}
-.hollow_button:hover{
-    background-color: #00000010;
-}
-.hollow_button input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
+
+.icon {
+    fill: #fff;
 }
