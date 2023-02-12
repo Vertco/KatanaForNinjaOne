@@ -1,23 +1,19 @@
 // Function | Localize HTML Page
-function localizeHtmlPage()
-{
-    //Localize by replacing __MSG_***__ meta tags
-    var objects = document.getElementsByTagName('html');
-    for (var j = 0; j < objects.length; j++)
-    {
-        var obj = objects[j];
+function localizeHtmlPage() {
+  //Localize by replacing __MSG_***__ meta tags
+  var objects = document.getElementsByTagName('html');
+  for (var j = 0; j < objects.length; j++) {
+    var obj = objects[j];
 
-        var valStrH = obj.innerHTML.toString();
-        var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function(match, v1)
-        {
-            return v1 ? chrome.i18n.getMessage(v1) : "";
-        });
+    var valStrH = obj.innerHTML.toString();
+    var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function (match, v1) {
+      return v1 ? chrome.i18n.getMessage(v1) : "";
+    });
 
-        if(valNewH != valStrH)
-        {
-            obj.innerHTML = valNewH;
-        }
+    if (valNewH != valStrH) {
+      obj.innerHTML = valNewH;
     }
+  }
 }
 
 // This will replace all the __MSG_***__ tags in all HTML pages, and perform the translation
@@ -41,7 +37,14 @@ function reloadfields() {
       }
     }
   });
+  chrome.storage.sync.get(["theme_module", "trigger_module"]).then((result) => {
+    theme_module_enabled = result.theme_module;
+    trigger_module_enabled = result.trigger_module;
+  });
 };
+
+// Load and set value of all settings fields
+reloadfields()
 
 // Function | Show notification
 function show_notification(message, color) {
@@ -88,9 +91,6 @@ function exportSettings() {
     a.click();
   });
 }
-
-// Load and set value of all settings fields
-reloadfields()
 
 // Save data when clicking on save button
 document.getElementById('save_button').addEventListener('click', function () {

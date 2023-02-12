@@ -20,7 +20,7 @@
     "default_popup": "popup/home/home.html"
   },
   "background": {
-    "service_worker": "scripts/background_worker.js"
+    "service_worker": "scripts/background.js"
   },
   "web_accessible_resources": [
     {

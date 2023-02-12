@@ -1,7 +1,10 @@
 html {
     background-color: #fff;
+}
+
+body {
     width: 335px;
-    height: 550px;
+    height: 520px;
 }
 
 #settings-container {

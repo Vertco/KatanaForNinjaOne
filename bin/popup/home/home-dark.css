@@ -1,7 +1,11 @@
-html {
+html{
+    background-color: #3b3b3b;
+}
+
+body {
     background-color: #3b3b3b;
     width: 335px;
-    height: 210px;
+    height: 180px;
 }
 
 .functions {

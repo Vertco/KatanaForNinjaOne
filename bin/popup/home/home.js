@@ -30,19 +30,29 @@ chrome.storage.sync.get(["debug"]).then((result) => {
 // Function | Load and set value of all settings fields
 
 function loadModuleStatus() {
-  chrome.storage.sync.get(["theme_module", "trigger_module"], function (items) {
-    for (var key in items) {
-      if (document.getElementById(key)) {
-        document.getElementById(key).innerHTML = items[key];
-        if (items[key] === true) {
-          document.getElementById(key).style.color = "green";
-        } else if (items[key] === false || items[key] === undefined) {
-          document.getElementById(key).style.color = "red";
-        }
+  const moduleNames = ["theme_module", "trigger_module"];
+
+  chrome.storage.sync.get(moduleNames, (result) => {
+    for (const moduleName of moduleNames) {
+      const moduleValue = result[moduleName];
+
+      switch (moduleValue) {
+        case undefined:
+          document.getElementById(moduleName).innerHTML = 'Disabled';
+          document.getElementById(moduleName).style.color = '#d53948';
+          break;
+        case true:
+          document.getElementById(moduleName).innerHTML = 'Enabled';
+          document.getElementById(moduleName).style.color = '#26a644';
+          break;
+        case false:
+          document.getElementById(moduleName).innerHTML = 'Disabled';
+          document.getElementById(moduleName).style.color = '#d53948';
+          break;
       }
     }
   });
-}
+};
 
 /*
 function loadModuleStatus() {

@@ -1,7 +1,10 @@
 html {
     background-color: #3b3b3b;
+}
+
+body {
     width: 335px;
-    height: 550px;
+    height: 520px;
 }
 
 #triggerFunctionIcon {
