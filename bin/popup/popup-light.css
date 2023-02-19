@@ -10,27 +10,30 @@ body {
 #notification {
     background-color: #337ab7;
     display: none;
-    width: 100%;
-    padding: 5px;
+    width: 295px;
+    padding: 20px;
     margin: 0px;
     text-align: center;
     font-weight: bold;
     position: absolute;
-    float: top;
+    float: left;
     z-index: 1;
     color: white;
-}
-
-.content {
-    background-color: #fff;
+    border-radius: 10px;
 }
 
 .content-header>a {
     float: right;
+    color: #3b3b3b;
+}
+
+.content-header>a:hover {
+    color: #13d5e1;
 }
 
 .content-footer {
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .content-footer>a,

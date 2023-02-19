@@ -28,56 +28,56 @@ chrome.storage.sync.get(["debug"]).then((result) => {
   }
 });
 
+// Save data when clicking on save button
+document.getElementById('save_button').addEventListener('click', function () {
+  chrome.storage.sync.set({
+    themeModule: document.getElementById("themeModule").checked,
+    triggerModule: document.getElementById("triggerModule").checked,
+    buttonText: document.getElementById("buttonText").value,
+    warningText: document.getElementById("warningText").value,
+    webhookUrl: document.getElementById("webhookUrl").value
+  }).then(() => {
+    loadSettings();
+    console.debug("Saved settings");
+    show_notification(chrome.i18n.getMessage("NOT_saved"), "#337ab7", "#fff")
+    setTimeout(hide_notification, 1500);
+  });
+});
+
 // Function | Load and set value of all settings fields
-function reloadfields() {
-  chrome.storage.sync.get(["button_text", "webhook_url", "warning_text"]).then((result) => {
+function loadSettings() {
+  // set module checkboxes
+  chrome.storage.sync.get(moduleNames, (result) => {
+    for (const moduleName of moduleNames) {
+      const moduleValue = result[moduleName];
+      switch (moduleValue) {
+        case undefined:
+          document.getElementById(moduleName).checked = false;
+          break;
+        case true:
+          document.getElementById(moduleName).checked = true;
+          break;
+        case false:
+          document.getElementById(moduleName).checked = false;
+          break;
+      }
+    }
+  });
+  chrome.storage.sync.get(["buttonText", "webhookUrl", "warningText"]).then((result) => {
     for (var [key, value] of Object.entries(result)) {
       if (value != undefined) {
         document.getElementById(key).value = value;
       }
     }
   });
-  chrome.storage.sync.get(["theme_module", "trigger_module"]).then((result) => {
-    theme_module_enabled = result.theme_module;
-    trigger_module_enabled = result.trigger_module;
+  chrome.storage.sync.get(['triggerModule'], function (result) {
+    const triggerSettings = document.getElementById('triggerSettings');
+    if (result.triggerModule === true) {
+      triggerSettings.style.display = 'block';
+    } else {
+      triggerSettings.style.display = 'none';
+    }
   });
-};
-
-// Load and set value of all settings fields
-reloadfields()
-
-// Function | Show notification
-function show_notification(message, color) {
-  // Get the element to display the notification
-  const notificationElement = document.querySelector('.notification');
-
-  // Update the content of the element
-  notificationElement.innerHTML = message;
-
-  // Show the notification
-  notificationElement.style.display = 'block';
-  notificationElement.style.backgroundColor = color;
-}
-
-// Function | Hide notification
-function hide_notification() {
-  // Get the element to hide
-  const notificationElement = document.querySelector('.notification');
-
-  // Hide the element
-  notificationElement.style.display = 'none';
-}
-
-// Function | Show debug
-function show_debug() {
-  console.debug('Show debug');
-  document.body.style.backgroundColor = "#e74856";
-};
-
-// Function | Hide debug
-function hide_debug() {
-  console.debug('Hide debug');
-  document.body.style.backgroundColor = "inherit";
 };
 
 // Function | Export settings
@@ -92,22 +92,41 @@ function exportSettings() {
   });
 }
 
-// Save data when clicking on save button
-document.getElementById('save_button').addEventListener('click', function () {
-  chrome.storage.sync.set({
-    button_text: document.getElementById("button_text").value,
-    warning_text: document.getElementById("warning_text").value,
-    webhook_url: document.getElementById("webhook_url").value
-  }).then(() => {
-    console.debug("Saved settings");
-    show_notification(chrome.i18n.getMessage("NOT_saved"), "#337ab7")
-    setTimeout(hide_notification, 1500);
+// Function | Load defaults
+function loadDefaults() {
+  chrome.storage.sync.clear(function () {
+    const defaultSettings = {
+      themeModule: true,
+      triggerModule: true,
+      theme: 0,
+      buttonText: 'Button',
+      warningText: 'Send HTTP request for',
+      webhookUrl: 'https://example.com/api/webhook',
+      debug: false
+    };
+    chrome.storage.sync.get(Object.keys(defaultSettings), function (result) {
+      let settingsUpdated = false;
+      for (const setting in defaultSettings) {
+        if (typeof result[setting] === 'undefined') {
+          result[setting] = defaultSettings[setting];
+          settingsUpdated = true;
+        }
+      }
+      if (settingsUpdated) {
+        chrome.storage.sync.set(result, function () {
+          loadSettings()
+        });
+
+      }
+    });
   });
-});
+};
+
+// Load and set value of all settings fields
+loadSettings()
 
 // Import data from JSON
-var fileInput = document.getElementById('import_button');
-fileInput.addEventListener('change', () => {
+document.getElementById('import_button').addEventListener('change', () => {
   var file = fileInput.files[0];
   var reader = new FileReader();
   reader.onload = function () {
@@ -116,17 +135,43 @@ fileInput.addEventListener('change', () => {
       console.debug("Settings saved");
       console.debug(settings)
     });
-    reloadfields();
+    loadSettings();
   };
   reader.readAsText(file);
   console.debug("Imported and saved settings");
-  show_notification(chrome.i18n.getMessage("NOT_importSaved"), "#337ab7");
+  show_notification(chrome.i18n.getMessage("NOT_importSaved"), "#337ab7", "#fff");
   setTimeout(hide_notification, 1500);
 });
 
 // Export data to JSON
 document.getElementById("export_button").addEventListener('click', function () {
   exportSettings();
-  show_notification(chrome.i18n.getMessage("NOT_export"));
+  show_notification(chrome.i18n.getMessage("NOT_export"), "#337ab7", "#fff");
   setTimeout(hide_notification, 1500);
+});
+
+// Load extension defaults
+document.getElementById('defaults_button').addEventListener('click', function () {
+  chrome.storage.sync.clear(function () {
+    loadDefaults();
+    loadSettings();
+    show_notification(chrome.i18n.getMessage("NOT_defaults"), '#fac905', '#3b3b3b');
+    setTimeout(hide_notification, 1500);
+  })
+});
+
+// Toggle triggerSettings on checkbox toggle
+document.getElementById('triggerModule').addEventListener('click', function () {
+  const triggerSettings = document.getElementById('triggerSettings');
+  var triggerChecked = document.getElementById("triggerModule").checked;
+  if (triggerChecked == true) {
+    triggerSettings.style.display = 'block';
+  } else {
+    triggerSettings.style.display = 'none';
+  }
+});
+
+// Hide notification when clicked on
+document.getElementById('notification').addEventListener('click', function () {
+  hide_notification()
 });

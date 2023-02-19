@@ -10,15 +10,16 @@ body {
 #notification {
     background-color: #337ab7;
     display: none;
-    width: 100%;
-    padding: 5px;
+    width: 295px;
+    padding: 20px;
     margin: 0px;
     text-align: center;
     font-weight: bold;
     position: absolute;
-    float: top;
+    float: left;
     z-index: 1;
     color: white;
+    border-radius: 10px;
 }
 
 #logo {
@@ -35,9 +36,15 @@ body {
 
 .content-header>a {
     float: right;
+    color: #fff;
+}
+
+.content-header>a:hover {
+    color: #13d5e1;
 }
 
 .content-footer {
+    padding-bottom: 15px;
     text-align: center;
 }
 

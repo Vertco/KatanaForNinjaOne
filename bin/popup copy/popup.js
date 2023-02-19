@@ -1,28 +1,25 @@
 // Function | Localize HTML Page
-function localizeHtmlPage()
-{
-    //Localize by replacing __MSG_***__ meta tags
-    var objects = document.getElementsByTagName('html');
-    for (var j = 0; j < objects.length; j++)
-    {
-        var obj = objects[j];
+function localizeHtmlPage() {
+  //Localize by replacing __MSG_***__ meta tags
+  var objects = document.getElementsByTagName('html');
+  for (var j = 0; j < objects.length; j++) {
+    var obj = objects[j];
 
-        var valStrH = obj.innerHTML.toString();
-        var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function(match, v1)
-        {
-            return v1 ? chrome.i18n.getMessage(v1) : "";
-        });
+    var valStrH = obj.innerHTML.toString();
+    var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function (match, v1) {
+      return v1 ? chrome.i18n.getMessage(v1) : "";
+    });
 
-        if(valNewH != valStrH)
-        {
-            obj.innerHTML = valNewH;
-        }
+    if (valNewH != valStrH) {
+      obj.innerHTML = valNewH;
     }
+  }
 }
 
 // This will replace all the __MSG_***__ tags in all HTML pages, and perform the translation
 localizeHtmlPage();
 
+// Show debug if enabled
 chrome.storage.sync.get(["debug"]).then((result) => {
   if (result.debug) {
     show_debug()
@@ -31,9 +28,28 @@ chrome.storage.sync.get(["debug"]).then((result) => {
   }
 });
 
+// Function | load defaults
+function loadDefaults() {
+  const defaultSettings = {
+    themeModule: true,
+    triggerModule: true,
+    theme: 0,
+    buttonText: 'Button',
+    warningText: 'Send HTTP request for',
+    webhookUrl: 'https://example.com/api/webhook',
+    debug: false
+  };
+
+  chrome.storage.sync.get(Object.keys(defaultSettings), function (result) {
+    chrome.storage.sync.set(result, function () {
+      console.log('Default settings have been set.');
+    });
+  });
+};
+
 // Function | Load and set value of all settings fields
 function reloadfields() {
-  chrome.storage.sync.get(["button_text", "webhook_url", "warning_text"]).then((result) => {
+  chrome.storage.sync.get(["buttonText", "webhookUrl", "warningText"]).then((result) => {
     for (var [key, value] of Object.entries(result)) {
       if (value != undefined) {
         document.getElementById(key).value = value;
@@ -112,9 +128,9 @@ document.querySelector('.logo').addEventListener('click', function () {
 // Save data when clicking on save button
 document.querySelector('.save_button').addEventListener('click', function () {
   chrome.storage.sync.set({
-    button_text: document.getElementById("button_text").value,
-    warning_text: document.getElementById("warning_text").value,
-    webhook_url: document.getElementById("webhook_url").value
+    buttonText: document.getElementById("buttonText").value,
+    warningText: document.getElementById("warningText").value,
+    webhookUrl: document.getElementById("webhookUrl").value
   }).then(() => {
     console.debug("Saved settings");
     show_notification(chrome.i18n.getMessage("NOT_saved"), "#337ab7")

@@ -4,11 +4,21 @@ html {
 
 body {
     width: 335px;
-    height: 520px;
+    height: 100%;
 }
 
 #settings-container {
     padding-top: 15px;
+}
+
+#defaults_button {
+    background-color: #d53948;
+    border-color: #d53948;
+}
+
+#defaults_button:hover {
+    background-color: #b62e3c;
+    border-color: #b62e3c;
 }
 
 .functions {
@@ -224,4 +234,8 @@ li {
 
 .checkbox-container > div {
     padding-left: 7.5px;
+}
+
+#bottom-buttons {
+    padding-bottom: 15px;
 }

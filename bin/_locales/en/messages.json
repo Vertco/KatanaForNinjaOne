@@ -7,6 +7,12 @@
         "message": "This extension extends the functionality of NinjaOne.",
         "description": "The description of the extension, displayed in the web store."
     },
+    "enabled": {
+        "message": "Enabled"
+    },
+    "disabled": {
+        "message": "Disabled"
+    },
     "INP_buttonText": {
         "message": "Button text",
         "description": "The name and placeholder of the input field."
@@ -19,14 +25,26 @@
         "message": "Webhook URL",
         "description": "The name and placeholder of the input field."
     },
+    "LAB_themeModule": {
+        "message": "Theme selector"
+    },
+    "LAB_triggerModule": {
+        "message": "Trigger button"
+    },
     "BTN_save": {
         "message": "Save"
+    },
+    "BTN_defaults": {
+        "message": "Defaults"
     },
     "BTN_import": {
         "message": "Import"
     },
     "BTN_export": {
         "message": "Export"
+    },
+    "BTN_copyright": {
+        "message": "Made by Vertc"
     },
     "NOT_saved": {
         "message": "Saved settings"
@@ -36,5 +54,8 @@
     },
     "NOT_export": {
         "message": "Exported settings to settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Loaded and saved extension defaults"
     }
 }

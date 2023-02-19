@@ -1,12 +1,13 @@
+// Set defaults on install
 chrome.runtime.onInstalled.addListener(function (details) {
     if (details.reason == "install") {
         const defaultSettings = {
-            theme_module: true,
-            trigger_module: true,
+            themeModule: true,
+            triggerModule: true,
             theme: 0,
-            button_text: 'Button',
-            warning_text: 'Send HTTP request for',
-            webhook_url: 'https://example.com/api/webhook',
+            buttonText: 'Button',
+            warningText: 'Send HTTP request for',
+            webhookUrl: 'https://example.com/api/webhook',
             debug: false
         };
 
@@ -28,9 +29,10 @@ chrome.runtime.onInstalled.addListener(function (details) {
     }
 });
 
+// Send HTTP request
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
-        fetch(request.webhook_url, {
+        fetch(request.webhookUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
