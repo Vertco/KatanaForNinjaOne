@@ -44,5 +44,9 @@ chrome.runtime.onMessage.addListener(
         }).then(response => {
             console.debug(`Called webhook with id ${request.id}`);
             console.debug(response.status);
+            return Promise.all([response.status, response.json()]);
+        }).then(([status, body]) => {
+            sendResponse({ status: status.toString(), body });
         });
+        return true;
     });
