@@ -20,6 +20,7 @@ body {
     z-index: 1;
     color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .content-header>a {
@@ -33,7 +34,6 @@ body {
 
 .content-footer {
     text-align: center;
-    padding-bottom: 15px;
 }
 
 .content-footer>a,
@@ -41,6 +41,7 @@ body {
     color: #3b3b3b;
     text-decoration: none;
     margin: auto;
+    padding: 0;
 }
 
 .content-footer>a:hover {

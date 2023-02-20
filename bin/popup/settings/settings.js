@@ -122,11 +122,65 @@ function loadDefaults() {
   });
 };
 
+// Function | Apply defaults
+function applyDefaults() {
+  chrome.storage.sync.clear(function () {
+    loadDefaults();
+    loadSettings();
+    show_notification(chrome.i18n.getMessage("NOT_defaults"), '#fac905', '#3b3b3b');
+    setTimeout(hide_notification, 1500);
+  })
+}
+
+// Function | Confirm popup
+function confirmPopup(message, confirmColor, callback) {
+  var popup = document.getElementById("popup");
+  var confirmButton = document.getElementById("popupConfirm");
+  var cancelButton = document.getElementById("popupCancel");
+  var popupMessage = document.querySelector(".popupMessage");
+
+  var popupConfirmHandler = function () {
+    popup.style.display = "none";
+    callback();
+  };
+
+  var popupCancelHandler = function () {
+    popup.style.display = "none";
+  };
+
+  confirmButton.addEventListener("click", popupConfirmHandler);
+  cancelButton.addEventListener("click", popupCancelHandler);
+
+  popupMessage.textContent = message;
+  confirmButton.style.backgroundColor = confirmColor;
+  confirmButton.style.borderColor = confirmColor;
+  popup.style.display = "flex";
+}
+
+// Function | Replace import button
+function replaceImportButton() {
+  if (typeof browser !== "undefined") {
+    // Firefox-specific code
+    const importButton = document.getElementById("import_button");
+    const importPlaceholder = document.createElement("button");
+    importPlaceholder.setAttribute("class", "hollow_button");
+    importPlaceholder.setAttribute("id", "import_placeholder");
+    importPlaceholder.setAttribute("type", "button");
+    importPlaceholder.textContent = chrome.i18n.getMessage("BTN_import");
+    importButton.parentNode.parentNode.replaceChild(importPlaceholder, importButton.parentNode);
+    document.getElementById('import_placeholder').addEventListener('click', function () {
+      show_notification(chrome.i18n.getMessage("NOT_firefox"), '#fac905', '#3b3b3b');
+      setTimeout(hide_notification, 1500);
+    });
+  }
+}
+
 // Load and set value of all settings fields
 loadSettings()
 
 // Import data from JSON
-document.getElementById('import_button').addEventListener('change', () => {
+var fileInput = document.getElementById('import_button');
+fileInput.addEventListener('change', () => {
   var file = fileInput.files[0];
   var reader = new FileReader();
   reader.onload = function () {
@@ -152,12 +206,7 @@ document.getElementById("export_button").addEventListener('click', function () {
 
 // Load extension defaults
 document.getElementById('defaults_button').addEventListener('click', function () {
-  chrome.storage.sync.clear(function () {
-    loadDefaults();
-    loadSettings();
-    show_notification(chrome.i18n.getMessage("NOT_defaults"), '#fac905', '#3b3b3b');
-    setTimeout(hide_notification, 1500);
-  })
+  confirmPopup(chrome.i18n.getMessage("POP_defaults"), "#d53948", applyDefaults);
 });
 
 // Toggle triggerSettings on checkbox toggle
@@ -174,4 +223,9 @@ document.getElementById('triggerModule').addEventListener('click', function () {
 // Hide notification when clicked on
 document.getElementById('notification').addEventListener('click', function () {
   hide_notification()
+});
+
+// Replace import button in FireFox
+document.addEventListener("DOMContentLoaded", function (event) {
+  replaceImportButton();
 });

@@ -239,3 +239,48 @@ li {
 #bottom-buttons {
     padding-bottom: 15px;
 }
+
+#popup {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-blend-mode: exclusion;
+    background: #1b1b1b99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: -15px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    float: left;
+    z-index: 1;
+}
+
+.popupWindow {
+    background-color: #fff;
+    width: 75%;
+    padding: 15px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popupWindow>ul {
+    float: right;
+}
+
+.popupMessage {
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 15px 30px;
+}
+
+#popupButtons {
+    display: flex;
+    justify-content: center;
+}
+
+#popupButtons>ul {
+    margin-left: 15px;
+}

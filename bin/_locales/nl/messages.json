@@ -13,6 +13,12 @@
     "disabled": {
         "message": "Uitgeschakeld"
     },
+    "confirm": {
+        "message": "Ja"
+    },
+    "cancel": {
+        "message": "Annuleer"
+    },
     "INP_buttonText": {
         "message": "Knop tekst",
         "description": "The name and placeholder of the input field."
@@ -25,7 +31,6 @@
         "message": "Webhook URL",
         "description": "The name and placeholder of the input field."
     },
-    
     "LAB_themeModule": {
         "message": "Thema menu"
     },
@@ -58,5 +63,11 @@
     },
     "NOT_defaults": {
         "message": "Standaard instellingen geladen en opgeslagen"
+    },
+    "NOT_firefox": {
+        "message": "Nog niet beschikbaar in FireFox"
+    },
+    "POP_defaults": {
+        "message": "Standaard instellingen laden?"
     }
 }

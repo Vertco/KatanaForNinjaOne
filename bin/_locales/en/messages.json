@@ -13,6 +13,12 @@
     "disabled": {
         "message": "Disabled"
     },
+    "confirm": {
+        "message": "Confirm"
+    },
+    "cancel": {
+        "message": "Cancel"
+    },
     "INP_buttonText": {
         "message": "Button text",
         "description": "The name and placeholder of the input field."
@@ -57,5 +63,11 @@
     },
     "NOT_defaults": {
         "message": "Loaded and saved extension defaults"
+    },
+    "NOT_firefox": {
+        "message": "Not yet available in Firefox"
+    },
+    "POP_defaults": {
+        "message": "Want to load defaults?"
     }
 }
