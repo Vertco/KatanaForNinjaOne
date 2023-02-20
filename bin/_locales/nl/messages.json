@@ -7,6 +7,18 @@
         "message": "Deze uitbreiding vergroot de functionaliteit van NinjaOne.",
         "description": "The description of the extension, displayed in the web store."
     },
+    "enabled": {
+        "message": "Ingeschakeld"
+    },
+    "disabled": {
+        "message": "Uitgeschakeld"
+    },
+    "confirm": {
+        "message": "Ja"
+    },
+    "cancel": {
+        "message": "Annuleer"
+    },
     "INP_buttonText": {
         "message": "Knop tekst",
         "description": "The name and placeholder of the input field."
@@ -19,14 +31,26 @@
         "message": "Webhook URL",
         "description": "The name and placeholder of the input field."
     },
+    "LAB_themeModule": {
+        "message": "Thema menu"
+    },
+    "LAB_triggerModule": {
+        "message": "Trigger knop"
+    },
     "BTN_save": {
         "message": "Opslaan"
+    },
+    "BTN_defaults": {
+        "message": "Herstel"
     },
     "BTN_import": {
         "message": "Importeren"
     },
     "BTN_export": {
         "message": "Exporteren"
+    },
+    "BTN_copyright": {
+        "message": "Gemaakt door Vertc"
     },
     "NOT_saved": {
         "message": "Instellingen opgeslagen"
@@ -36,5 +60,14 @@
     },
     "NOT_export": {
         "message": "Instellingen geëxporteerd naar settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Standaard instellingen geladen en opgeslagen"
+    },
+    "NOT_firefox": {
+        "message": "Nog niet beschikbaar in FireFox"
+    },
+    "POP_defaults": {
+        "message": "Standaard instellingen laden?"
     }
 }

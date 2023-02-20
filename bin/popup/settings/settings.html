@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>__MSG_appName__</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="/popup/settings/settings-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/popup-dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/popup/settings/settings-light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/popup/popup-light.css" media="(prefers-color-scheme: light)">
+</head>
+
+<div id="notification"></div>
+<div id="popup">
+    <div class="popupWindow">
+        <div class="popupMessage">
+            Are you sure?
+        </div>
+        <div id="popupButtons">
+            <ul>
+                <li>
+                    <button class="hollow_button" id="popupCancel" type="button">__MSG_cancel__</button>
+                </li>
+                <li>
+                    <button class="filled_button" id="popupConfirm" type="button">__MSG_confirm__</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="content">
+        <div class="content-header">
+            <img id="logo" height="60" src="/popup/media/Trigger+_logo_Light.svg">
+            <a href="/popup/home/home.html"><svg width="24" height="24" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m 20.485213,3.5147871 c 4.686383,4.6863827 4.686383,12.2840419 0,16.9704259 -4.686384,4.686383 -12.2840432,4.686383 -16.9704259,0 -4.6863829,-4.686384 -4.6863829,-12.2840432 0,-16.9704259 4.6863827,-4.6863829 12.2840419,-4.6863829 16.9704259,0 z M 19.212431,4.787569 A 10.199918,10.199918 0 1 0 4.787569,19.212431 10.199918,10.199918 0 0 0 19.212431,4.787569 Z m -2.969825,2.9698244 a 0.8999927,0.8999927 0 0 1 0,1.2727824 L 13.272782,12 l 2.969824,2.969825 a 0.8999927,0.8999927 0 0 1 -1.272781,1.272781 L 12,13.272782 9.0301758,16.242606 A 0.8999927,0.8999927 0 0 1 7.7573934,14.969825 L 10.727218,12 7.7573934,9.0301758 A 0.89999307,0.89999307 0 0 1 9.0301758,7.7573934 L 12,10.727218 14.969825,7.7573934 a 0.8999927,0.8999927 0 0 1 1.272781,0 z"
+                        fill="currentColor" id="path3268" />
+                </svg></a>
+        </div>
+        <div id="settings-container">
+            <label class="checkbox-container"><svg width="24" height="24" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-1.5v-17a8.5 8.5 0 0 1 0 17Z"
+                        fill="currentColor" />
+                </svg>
+                <div>
+                    __MSG_LAB_themeModule__
+                </div>
+                <input type="checkbox" id="themeModule">
+                <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container"><img class="icon" height="24" id="triggerFunctionIcon"
+                    src="/popup/media/triggerFunction_Light.svg" />
+                <div>
+                    __MSG_LAB_triggerModule__
+                </div>
+                <input type="checkbox" id="triggerModule">
+                <span class="checkmark"></span>
+            </label>
+            <div id="triggerSettings">
+                <div class=form>
+                    <div>
+                        <b>__MSG_INP_buttonText__</b>
+                        <input class="textfield" id="buttonText" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_buttonText__">
+                    </div>
+                    <div>
+                        <b>__MSG_INP_warningText__</b>
+                        <input class="textfield" id="warningText" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_warningText__">
+                    </div>
+                    <div>
+                        <b>__MSG_INP_webhookURL__</b>
+                        <input class="textfield" id="webhookUrl" type="text" spellcheck="false"
+                            placeholder="__MSG_INP_webhookURL__">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <div class="hollow_button"><input type="file" id="import_button"
+                                        accept=".json">__MSG_BTN_import__</div>
+                            </li>
+                            <li>
+                                <button class="hollow_button" id="export_button"
+                                    type="button">__MSG_BTN_export__</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-buttons">
+                <ul>
+                    <li>
+                        <button class="filled_button" id="save_button" type="button"><b>__MSG_BTN_save__</b></button>
+                    </li>
+                    <li>
+                        <button class="filled_button" id="defaults_button"
+                            type="button"><b>__MSG_BTN_defaults__</b></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-footer">
+            <a href="https://www.vertc.nl/#about" target="_blank">__MSG_BTN_copyright__<sup>&#169;</sup></a>
+        </div>
+    </div>
+</body>
+<script src="/popup/popup.js"></script>
+<script src="settings.js"></script>
+
+</html>

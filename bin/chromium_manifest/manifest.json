@@ -17,10 +17,10 @@
     "128": "icons/Trigger+_Favicon_128.png"
   },
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup/home/home.html"
   },
   "background": {
-    "service_worker": "scripts/background_worker.js"
+    "service_worker": "scripts/background.js"
   },
   "web_accessible_resources": [
     {
