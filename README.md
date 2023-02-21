@@ -7,12 +7,12 @@
 
 ---
 
-# Trigger+ for NinjaOne
-This repository houses the Trigger for NinjaOne Chromium extension.
+# Katana for NinjaOne
+This repository houses the Katana for NinjaOne Chromium extension.
 
 With this extension you can add a button to the [NinjaOne](https://www.ninjaone.com/) UI that sends the current device to a selected endpoint.
 From there you can integrate it into any program you want.
-In the [Guides section](https://github.com/Vertco/TriggerForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
+In the [Guides section](https://github.com/Vertco/KatanaForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
 
 Since version 0.9.0 it also includes an option to enable dark theme in NinjaOne. This will invert the colors on the page while keeping the colors as close as possible to the original.
 
@@ -20,7 +20,7 @@ The extension is available in the [Microsoft Edge Add-on store](https://microsof
 
 To test the latest verions before it's released to the stores you will need to install the extension manually using a zip of the bin folder.<br>
 Follow the link for your browser for an article on how to sideload a extension:<br>
-[Microsoft edge](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd)<br>
+[Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)<br>
 [Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 
 ---
@@ -28,7 +28,7 @@ Follow the link for your browser for an article on how to sideload a extension:<
 Below are some guides to help you get started with the extension.
 
 ## Settings file
-Trigger for NinjaOne has an option to import settings. This will make it easier to roll out the extension to multiple users.
+Katana for NinjaOne has an option to import settings. This will make it easier to roll out the extension to multiple users.
 The settings are stored in a .json file with the content formatted as shown below:
 ```
 {
@@ -38,7 +38,7 @@ The settings are stored in a .json file with the content formatted as shown belo
     "darkMode":true
 }
 ```
-[Download](https://raw.githubusercontent.com/Vertco/TriggerForNinjaOne/main/settings.json)
+[Download](https://raw.githubusercontent.com/Vertco/KatanaForNinjaOne/main/settings.json)
 
 ## Integrate with Microsoft Power Automate
 When working in the Microsoft ecosystem, you'll have access to Power Automate. This is a application where you can make "flows" to automate workflows.
