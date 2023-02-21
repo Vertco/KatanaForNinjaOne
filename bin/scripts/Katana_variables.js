@@ -7,7 +7,7 @@ themeSwitcher.innerHTML = '<div id="theme-button" aria-expanded="false" aria-has
 themeSwitcher.id = "theme_switcher";
 themeSwitcher.classList.add("css-9j9vjq", "eu2udwo8");
 
-// Trigger+ button
+// Katana button
 var path = window.location.hash.substr(1);
 var idString = path.match(/\d{1,6}/);
 var deviceId = parseInt(idString);

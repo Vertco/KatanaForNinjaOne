@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "manifest_version": 3,
   "default_locale": "en",
   "description": "__MSG_appDesc__",
@@ -11,10 +11,10 @@
     "storage"
   ],
   "icons": {
-    "16": "icons/Trigger+_Favicon_16.png",
-    "32": "icons/Trigger+_Favicon_32.png",
-    "48": "icons/Trigger+_Favicon_48.png",
-    "128": "icons/Trigger+_Favicon_128.png"
+    "16": "icons/Katana_Favicon_16.png",
+    "32": "icons/Katana_Favicon_32.png",
+    "48": "icons/Katana_Favicon_48.png",
+    "128": "icons/Katana_Favicon_128.png"
   },
   "action": {
     "default_popup": "popup/home/home.html"
@@ -53,10 +53,10 @@
       ],
       "js": [
         "lib/jquery.min.js",
-        "scripts/trigger+_variables.js",
-        "scripts/trigger+_functions.js",
-        "scripts/trigger+_trigger_button.js",
-        "scripts/trigger+_theme_button.js"
+        "scripts/Katana_variables.js",
+        "scripts/Katana_functions.js",
+        "scripts/Katana_trigger_button.js",
+        "scripts/Katana_theme_button.js"
       ],
       "css": [
         "scripts/themeMenu.css"

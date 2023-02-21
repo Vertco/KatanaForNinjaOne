@@ -2,7 +2,7 @@
 function addTriggerButton(deviceType) {
     chrome.storage.sync.get(['triggerModule'], function (result) {
         if (result.triggerModule) {
-            console.debug('Trigger+ Button removed');
+            console.debug('Katana Button removed');
             path = window.location.hash.substr(1);
             idString = path.match(/\d{1,6}/)
             id = parseInt(idString)
@@ -35,13 +35,13 @@ function addTriggerButton(deviceType) {
                 $(`${navSelector} > a:nth-child(${navChildren})`).remove();
                 chrome.storage.sync.get(["buttonText"]).then((result) => {
                     $(navSelector).append(
-                        `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.buttonText + ` <sup>Trigger</div></div></a>`
+                        `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.buttonText + ` <sup>Katana</div></div></a>`
                     );
                     console.debug(`Inserted button with id ${deviceId}`);
                 });
                 waitForElm('#requestButtonContainer').then(() => {
                     document.getElementById('requestButtonContainer').addEventListener('click', function () {
-                        console.debug('Click event listener added to Trigger+ button');
+                        console.debug('Click event listener added to Katana button');
                         sendRequest();
                     });
                 });
