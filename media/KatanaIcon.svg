@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg329"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="KatanaIcon.svg"
+   inkscape:export-filename="..\Repo\bin\icons\Katana_Favicon_128.png"
+   inkscape:export-xdpi="24"
+   inkscape:export-ydpi="24"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview331"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.73851712"
+     inkscape:cx="-94.784533"
+     inkscape:cy="373.72187"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="3832"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs326" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g12136"
+       transform="matrix(3.5683101,0,0,3.5683103,-647.35698,192.80575)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.92827;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect10540"
+         width="37.963814"
+         height="37.963814"
+         x="181.41837"
+         y="-54.032787"
+         ry="8.1351032" />
+      <g
+         id="g10432"
+         transform="translate(24.767691,-57.62331)">
+        <path
+           id="path4820-3"
+           style="font-weight:bold;font-size:44.0973px;font-family:inter;-inkscape-font-specification:'inter Bold';text-align:center;letter-spacing:-2.64583px;text-anchor:middle;display:inline;fill:#13d5e1;fill-opacity:1;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill"
+           d="m 182.88328,20.982374 -15.09486,6.984724 -0.1826,10.461852 6.77943,0.118336 0.15902,-9.112269 3.40626,-4.01275 8.55355,13.336553 8.11041,0.141571 z" />
+        <path
+           id="path10168"
+           style="font-weight:bold;font-size:44.0973px;font-family:inter;-inkscape-font-specification:'inter Bold';text-align:center;letter-spacing:-2.64583px;text-anchor:middle;display:inline;fill:#2b3749;fill-opacity:1;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:round;paint-order:markers stroke fill"
+           d="m 163.51076,6.9478904 0.56561,21.5995456 14.77582,-7.636505 11.5211,-14.6664607 -8.12436,0.212744 -11.16732,14.4374967 -0.42257,0.01109 -0.37014,-14.1353784 z" />
+      </g>
+    </g>
+  </g>
+</svg>
