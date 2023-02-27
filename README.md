@@ -1,4 +1,4 @@
-![Large_promotional_tile](https://user-images.githubusercontent.com/47614276/212768576-f2767907-2508-4f08-86b9-d76979564b05.png)
+![Large_promo_tile](https://user-images.githubusercontent.com/47614276/221411640-0e8a1443-e33f-434a-8a81-b97ca8402d5c.png)
 <p align="center">
   <a href="https://www.paypal.com/donate/?hosted_button_id=PLM7Q4RRJK48N" target="_blank">
     <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"/>
@@ -7,20 +7,19 @@
 
 ---
 
-# Trigger+ for NinjaOne
-This repository houses the Trigger for NinjaOne Chromium extension.
+# Katana for NinjaOne
+This repository houses the Katana for NinjaOne Chromium extension.
 
-With this extension you can add a button to the [NinjaOne](https://www.ninjaone.com/) UI that sends the current device to a selected endpoint.
+The Katana extension adds dark theme support to NinjaOne aswell as adding a button to devices that sends the current device to a selected endpoint.
 From there you can integrate it into any program you want.
-In the [Guides section](https://github.com/Vertco/TriggerForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
-
-Since version 0.9.0 it also includes an option to enable dark theme in NinjaOne. This will invert the colors on the page while keeping the colors as close as possible to the original.
+In the [Guides section](https://github.com/Vertco/KatanaForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
 
 The extension is available in the [Microsoft Edge Add-on store](https://microsoftedge.microsoft.com/addons/detail/trigger-for-ninjaone/elakkmlooholefhpllcioobeepoombdn) and in the [Google Chrome webstore](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd).
 
 To test the latest verions before it's released to the stores you will need to install the extension manually using a zip of the bin folder.<br>
+After downloading the bin folder, you'll need to move the respective Firefox of Chromium manifest file into the bin folder.<br>
 Follow the link for your browser for an article on how to sideload a extension:<br>
-[Microsoft edge](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd)<br>
+[Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)<br>
 [Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 
 ---
@@ -28,17 +27,25 @@ Follow the link for your browser for an article on how to sideload a extension:<
 Below are some guides to help you get started with the extension.
 
 ## Settings file
-Trigger for NinjaOne has an option to import settings. This will make it easier to roll out the extension to multiple users.
+Katana for NinjaOne has an option to import settings. This will make it easier to roll out the extension to multiple users.
 The settings are stored in a .json file with the content formatted as shown below:
 ```
 {
-    "button_text":"Button",
-    "confirmation_text":"Sent request for",
-    "webhook_url":"https://example.com/api/webhook/123abcABC",
-    "darkMode":true
+  "buttonText": "Button",
+  "debug": false,
+  "theme": 2,
+  "themeModule": true,
+  "triggerModule": true,
+  "warningText": "Sent request for",
+  "webhookUrl": "https://example.com/api/webhook/123abcABC"
 }
 ```
-[Download](https://raw.githubusercontent.com/Vertco/TriggerForNinjaOne/main/settings.json)
+[Download](https://raw.githubusercontent.com/Vertco/KatanaForNinjaOne/main/settings.json)
+
+The theme option is as follows:<br>
+0: Light theme<br>
+1: Dark theme<br>
+2: Follow browser<br>
 
 ## Integrate with Microsoft Power Automate
 When working in the Microsoft ecosystem, you'll have access to Power Automate. This is a application where you can make "flows" to automate workflows.
