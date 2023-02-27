@@ -1,9 +1,30 @@
-name: Add chromium zip to release
+name: Add zip files to new releases
 on:
   release:
     types: [created]
 jobs:
-  zip-release:
+  firefox-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - name: Copy manifest file for firefox
+        run: cp bin/manifests/firefox_manifest/manifest.json bin/src
+      - name: Install zip
+        uses: montudor/action-zip@v1
+      - name: Zip firefox extension
+        run: zip -qq -r bin_firefox.zip .
+        working-directory: bin/src
+      - name: Upload Release Asset for firefox
+        id: upload-release-asset-firefox 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: bin/src/bin_firefox.zip 
+          asset_name: ${{ github.event.release.tag_name }}_firefox.zip 
+          asset_content_type: application/zip
+  chromium-zip:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.3.0
