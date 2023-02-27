@@ -1,0 +1,26 @@
+name: Add chromium zip to release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  zip-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Copy manifest file for chromium
+        run: cp bin/manifests/chromium_manifest/manifest.json bin/src
+      - name: Zip Release for chromium
+        uses: montudor/action-zip@v0.1.0
+        with:
+          args: zip -qq -r ./bin_chromium.zip ./bin/src
+      - name: Upload Release Asset for chromium
+        id: upload-release-asset-chromium 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }} 
+          asset_path: ./bin_chromium.zip 
+          asset_name: ${{ github.event.release.tag_name }}_chromium.zip 
+          asset_content_type: application/zip
