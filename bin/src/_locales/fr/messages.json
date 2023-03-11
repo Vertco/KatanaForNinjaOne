@@ -1,0 +1,73 @@
+{
+    "appName": {
+        "message": "Katana pour NinjaOne",
+        "description": "The name of the extension, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "Cette extension permet d'étendre les fonctionnalités de NinjaOne.",
+        "description": "The description of the extension, displayed in the web store."
+    },
+    "enabled": {
+        "message": "Activé"
+    },
+    "disabled": {
+        "message": "Handicapés"
+    },
+    "confirm": {
+        "message": "Confirmer"
+    },
+    "cancel": {
+        "message": "Annuler"
+    },
+    "INP_buttonText": {
+        "message": "Texte du bouton",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_warningText": {
+        "message": "Texte d'avertissement",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_webhookURL": {
+        "message": "URL du webhook",
+        "description": "The name and placeholder of the input field."
+    },
+    "LAB_themeModule": {
+        "message": "Sélecteur de thème"
+    },
+    "LAB_triggerModule": {
+        "message": "Bouton de déclenchement"
+    },
+    "BTN_save": {
+        "message": "Économiser"
+    },
+    "BTN_defaults": {
+        "message": "Valeurs par défaut"
+    },
+    "BTN_import": {
+        "message": "Importation"
+    },
+    "BTN_export": {
+        "message": "Exportation"
+    },
+    "BTN_copyright": {
+        "message": "Réalisé par Vertc"
+    },
+    "NOT_saved": {
+        "message": "Paramètres enregistrés"
+    },
+    "NOT_importSaved": {
+        "message": "Paramètres importés et enregistrés"
+    },
+    "NOT_export": {
+        "message": "Paramètres exportés vers settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Chargement et sauvegarde des valeurs par défaut des extensions"
+    },
+    "NOT_firefox": {
+        "message": "Pas encore disponible dans Firefox"
+    },
+    "POP_defaults": {
+        "message": "Vous souhaitez charger les valeurs par défaut?"
+    }
+}

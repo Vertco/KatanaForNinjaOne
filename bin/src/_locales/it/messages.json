@@ -1,0 +1,73 @@
+{
+    "appName": {
+        "message": "Katana per NinjaOne",
+        "description": "The name of the extension, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "Questa estensione estende le funzionalità di NinjaOne.",
+        "description": "The description of the extension, displayed in the web store."
+    },
+    "enabled": {
+        "message": "Abilitato"
+    },
+    "disabled": {
+        "message": "Disabili"
+    },
+    "confirm": {
+        "message": "Confermare"
+    },
+    "cancel": {
+        "message": "Annullamento"
+    },
+    "INP_buttonText": {
+        "message": "Testo del pulsante",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_warningText": {
+        "message": "Testo di avviso",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_webhookURL": {
+        "message": "URL Webhook",
+        "description": "The name and placeholder of the input field."
+    },
+    "LAB_themeModule": {
+        "message": "Selettore di temi"
+    },
+    "LAB_triggerModule": {
+        "message": "Pulsante di attivazione"
+    },
+    "BTN_save": {
+        "message": "Risparmiare"
+    },
+    "BTN_defaults": {
+        "message": "Impostazioni predefinite"
+    },
+    "BTN_import": {
+        "message": "Importazione"
+    },
+    "BTN_export": {
+        "message": "Esportazione"
+    },
+    "BTN_copyright": {
+        "message": "Realizzato da Vertc"
+    },
+    "NOT_saved": {
+        "message": "Impostazioni salvate"
+    },
+    "NOT_importSaved": {
+        "message": "Impostazioni importate e salvate"
+    },
+    "NOT_export": {
+        "message": "Impostazioni esportate in settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Caricamento e salvataggio delle impostazioni predefinite dell'estensione"
+    },
+    "NOT_firefox": {
+        "message": "Non ancora disponibile in Firefox"
+    },
+    "POP_defaults": {
+        "message": "Volete caricare le impostazioni predefinite?"
+    }
+}

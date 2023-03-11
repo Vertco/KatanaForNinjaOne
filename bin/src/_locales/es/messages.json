@@ -1,0 +1,73 @@
+{
+    "appName": {
+        "message": "Katana para NinjaOne",
+        "description": "The name of the extension, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "Esta extensión amplía la funcionalidad de NinjaOne.",
+        "description": "The description of the extension, displayed in the web store."
+    },
+    "enabled": {
+        "message": "Activado"
+    },
+    "disabled": {
+        "message": "Disabled"
+    },
+    "confirm": {
+        "message": "Discapacitados"
+    },
+    "cancel": {
+        "message": "Cancelar"
+    },
+    "INP_buttonText": {
+        "message": "Texto del botón",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_warningText": {
+        "message": "Texto de advertencia",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_webhookURL": {
+        "message": "URL del webhook",
+        "description": "The name and placeholder of the input field."
+    },
+    "LAB_themeModule": {
+        "message": "Selector de temas"
+    },
+    "LAB_triggerModule": {
+        "message": "Botón de disparo"
+    },
+    "BTN_save": {
+        "message": "Guardar"
+    },
+    "BTN_defaults": {
+        "message": "Por defecto"
+    },
+    "BTN_import": {
+        "message": "Importar"
+    },
+    "BTN_export": {
+        "message": "Exportar"
+    },
+    "BTN_copyright": {
+        "message": "Hecho por Vertc"
+    },
+    "NOT_saved": {
+        "message": "Ajustes guardados"
+    },
+    "NOT_importSaved": {
+        "message": "Ajustes importados y guardados"
+    },
+    "NOT_export": {
+        "message": "Ajustes exportados a settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Extensión cargada y guardada por defecto"
+    },
+    "NOT_firefox": {
+        "message": "Aún no disponible en Firefox"
+    },
+    "POP_defaults": {
+        "message": "¿Quieres cargar los valores por defecto?"
+    }
+}

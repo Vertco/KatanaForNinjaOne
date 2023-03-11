@@ -1,0 +1,73 @@
+{
+    "appName": {
+        "message": "Katana für NinjaOne",
+        "description": "The name of the extension, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "Diese Erweiterung erweitert die Funktionalität von NinjaOne.",
+        "description": "The description of the extension, displayed in the web store."
+    },
+    "enabled": {
+        "message": "Aktiviert"
+    },
+    "disabled": {
+        "message": "Deaktiviert"
+    },
+    "confirm": {
+        "message": "Bestätigen"
+    },
+    "cancel": {
+        "message": "Kündigen"
+    },
+    "INP_buttonText": {
+        "message": "Schaltflächentext",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_warningText": {
+        "message": "Warntext",
+        "description": "The name and placeholder of the input field."
+    },
+    "INP_webhookURL": {
+        "message": "Webhook URL",
+        "description": "The name and placeholder of the input field."
+    },
+    "LAB_themeModule": {
+        "message": "Themenwähler"
+    },
+    "LAB_triggerModule": {
+        "message": "Auslösetaste"
+    },
+    "BTN_save": {
+        "message": "Speichern"
+    },
+    "BTN_defaults": {
+        "message": "Standardwerte"
+    },
+    "BTN_import": {
+        "message": "Importieren"
+    },
+    "BTN_export": {
+        "message": "Exportieren"
+    },
+    "BTN_copyright": {
+        "message": "Hergestellt von Vertc"
+    },
+    "NOT_saved": {
+        "message": "Gespeicherte Einstellungen"
+    },
+    "NOT_importSaved": {
+        "message": "Importierte und gespeicherte Einstellungen"
+    },
+    "NOT_export": {
+        "message": "Exportierten Einstellungen nach settings.json"
+    },
+    "NOT_defaults": {
+        "message": "Geladene und gespeicherte Standardwerte für Erweiterungen"
+    },
+    "NOT_firefox": {
+        "message": "In Firefox noch nicht verfügbar"
+    },
+    "POP_defaults": {
+        "message": "Möchten Sie die Standardeinstellungen laden?"
+    }
+}
