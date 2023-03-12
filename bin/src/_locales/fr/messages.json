@@ -1,74 +1,74 @@
 {
     "appName": {
-        "message": "Katana for NinjaOne",
+        "message": "Katana pour NinjaOne",
         "description": "The name of the extension, displayed in the web store."
     },
     "appDesc": {
-        "message": "This extension extends the functionality of NinjaOne.",
+        "message": "Cette extension permet d'étendre les fonctionnalités de NinjaOne.",
         "description": "The description of the extension, displayed in the extension details."
     },
     "enabled": {
-        "message": "Enabled"
+        "message": "Activé"
     },
     "disabled": {
-        "message": "Disabled"
+        "message": "Handicapés"
     },
     "confirm": {
-        "message": "Confirm"
+        "message": "Confirmer"
     },
     "cancel": {
-        "message": "Cancel"
+        "message": "Annuler"
     },
     "INP_buttonText": {
-        "message": "Button text",
+        "message": "Texte du bouton",
         "description": "The name and placeholder of the input field."
     },
     "INP_warningText": {
-        "message": "Warning text",
+        "message": "Texte d'avertissement",
         "description": "The name and placeholder of the input field."
     },
     "INP_webhookURL": {
-        "message": "Webhook URL",
+        "message": "URL du webhook",
         "description": "The name and placeholder of the input field."
     },
     "LAB_themeModule": {
-        "message": "Theme selector"
+        "message": "Sélecteur de thème"
     },
     "LAB_triggerModule": {
-        "message": "Trigger button"
+        "message": "Bouton de déclenchement"
     },
     "BTN_save": {
-        "message": "Save"
+        "message": "Économiser"
     },
     "BTN_defaults": {
-        "message": "Defaults"
+        "message": "Valeurs par défaut"
     },
     "BTN_import": {
-        "message": "Import"
+        "message": "Importation"
     },
     "BTN_export": {
-        "message": "Export"
+        "message": "Exportation"
     },
     "BTN_copyright": {
-        "message": "Made by Vertc"
+        "message": "Réalisé par Vertc"
     },
     "NOT_saved": {
-        "message": "Saved settings"
+        "message": "Paramètres enregistrés"
     },
     "NOT_importSaved": {
-        "message": "Imported and saved settings"
+        "message": "Paramètres importés et enregistrés"
     },
     "NOT_export": {
-        "message": "Exported settings to settings.json"
+        "message": "Paramètres exportés vers settings.json"
     },
     "NOT_defaults": {
-        "message": "Loaded and saved extension defaults"
+        "message": "Chargement et sauvegarde des valeurs par défaut des extensions"
     },
     "NOT_firefox": {
-        "message": "Not yet available in Firefox",
+        "message": "Pas encore disponible dans Firefox",
         "description": "Message special for Firefox versions, for the functions that are not yet available there."
     },
     "POP_defaults": {
-        "message": "Want to load defaults?"
+        "message": "Vous souhaitez charger les valeurs par défaut?"
     }
 }
