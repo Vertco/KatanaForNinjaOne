@@ -29,10 +29,10 @@ function addTriggerButton(deviceType) {
             }
 
             waitForElm(navSelector).then(() => {
-                var nav = document.querySelector(navSelector);
-                var navChildren = nav.children.length
-                console.debug(navChildren.length);
-                $(`${navSelector} > a:nth-child(${navChildren})`).remove();
+                if (document.getElementById('requestButtonContainer')) {
+                    var requestButtonContainer = document.getElementById('requestButtonContainer');
+                    requestButtonContainer.remove();
+                }
                 chrome.storage.sync.get(["buttonText"]).then((result) => {
                     $(navSelector).append(
                         `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.buttonText + ` <sup>Katana</div></div></a>`
