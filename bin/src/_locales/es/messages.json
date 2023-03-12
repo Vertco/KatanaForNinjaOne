@@ -5,7 +5,7 @@
     },
     "appDesc": {
         "message": "Esta extensión amplía la funcionalidad de NinjaOne.",
-        "description": "The description of the extension, displayed in the web store."
+        "description": "The description of the extension, displayed in the extension details."
     },
     "enabled": {
         "message": "Activado"
@@ -65,7 +65,8 @@
         "message": "Extensión cargada y guardada por defecto"
     },
     "NOT_firefox": {
-        "message": "Aún no disponible en Firefox"
+        "message": "Aún no disponible en Firefox",
+        "description": "Message special for Firefox versions, for the functions that are not yet available there."
     },
     "POP_defaults": {
         "message": "¿Quieres cargar los valores por defecto?"
