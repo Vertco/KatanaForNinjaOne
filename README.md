@@ -14,13 +14,14 @@ The Katana extension adds dark theme support to NinjaOne aswell as adding a butt
 From there you can integrate it into any program you want.
 In the [Guides section](https://github.com/Vertco/KatanaForNinjaOne/edit/main/README.md#guides) we'll show you how to run an action in Microsoft Power Automate for example.
 
-The extension is available in the [Microsoft Edge Add-on store](https://microsoftedge.microsoft.com/addons/detail/trigger-for-ninjaone/elakkmlooholefhpllcioobeepoombdn) and in the [Google Chrome webstore](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd).
+The extension is available in the [Microsoft Edge Add-on store](https://microsoftedge.microsoft.com/addons/detail/trigger-for-ninjaone/elakkmlooholefhpllcioobeepoombdn), [Google Chrome webstore](https://chrome.google.com/webstore/detail/trigger-for-ninjaone/jlkhefmehegjclbdmipbedombllgmgpd) and in the [Firefox add-on store](https://addons.mozilla.org/en-US/firefox/addon/katana-for-ninjaone/).
 
 To test the latest verions before it's released to the stores you will need to install the extension manually using a zip of the bin folder.<br>
 After downloading the bin folder, you'll need to move the respective Firefox of Chromium manifest file into the bin folder.<br>
 Follow the link for your browser for an article on how to sideload a extension:<br>
 [Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)<br>
-[Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
+[Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)<br>
+[Firefox](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#extensions)
 
 ---
 # Guides
