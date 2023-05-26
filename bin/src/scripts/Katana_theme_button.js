@@ -18,22 +18,29 @@ chrome.storage.sync.get(['themeModule'], function (result) {
                 } else {
                     themePopup.style.display = "block";
                     showThemeMenu = true;
+                    chrome.storage.sync.get('theme', function (data) {
+                        var theme = data.theme;
+                        displayCheckmark(theme);
+                    });
                 }
             });
 
             var lightThemeButton = document.getElementById("light-theme-button");
             lightThemeButton.addEventListener('click', function () {
                 setTheme(0);
+                displayCheckmark(0)
             });
 
             var darkThemeButton = document.getElementById("dark-theme-button");
             darkThemeButton.addEventListener('click', function () {
                 setTheme(1);
+                displayCheckmark(1)
             });
 
             var autoThemeButton = document.getElementById("auto-theme-button");
             autoThemeButton.addEventListener('click', function () {
                 setTheme(2);
+                displayCheckmark(2)
             });
 
             // Close menu on hash change or outside click
@@ -43,7 +50,7 @@ chrome.storage.sync.get(['themeModule'], function (result) {
                     showThemeMenu = false;
                 }
             });
-            
+
             themePopup.addEventListener('click', function (event) {
                 event.stopPropagation();
             });
