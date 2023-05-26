@@ -46,6 +46,10 @@ chrome.storage.sync.get(['themeModule'], function (result) {
                     showThemeMenu = false;
                 }
             });
+            
+            themePopup.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
 
             window.addEventListener('hashchange', function () {
                 themePopup.style.display = "none";
