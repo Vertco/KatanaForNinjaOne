@@ -45,6 +45,29 @@ function sendRequest() {
     });
 };
 
+function displayCheckmark(theme) {
+    light = document.getElementById('light-theme-checkmark')
+    dark = document.getElementById('dark-theme-checkmark')
+    browser = document.getElementById('follow-browser-checkmark')
+    switch (theme) {
+        case 0:
+            light.style.display = "flex";
+            dark.style.display = "none";
+            browser.style.display = "none";
+            break;
+        case 1:
+            light.style.display = "none";
+            dark.style.display = "flex";
+            browser.style.display = "none";
+            break;
+        case 2:
+            light.style.display = "none";
+            dark.style.display = "none";
+            browser.style.display = "flex";
+            break;
+    }
+}
+
 // Set theme
 function setTheme(num) {
     chrome.storage.sync.get(['themeModule'], function (result) {
@@ -80,7 +103,7 @@ function loadTheme() {
         if (result.themeModule) {
             chrome.storage.sync.get('theme', function (data) {
                 var theme = data.theme;
-                setTheme(theme)
+                setTheme(theme);
             });
         }
     });

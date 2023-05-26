@@ -17,3 +17,7 @@
 .css-menu-item:hover {
     background-color: #f5f8fa;
 }
+
+.css-theme_checkmark {
+    align-items: center;
+}

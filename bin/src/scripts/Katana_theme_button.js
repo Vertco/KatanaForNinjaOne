@@ -18,25 +18,29 @@ chrome.storage.sync.get(['themeModule'], function (result) {
                 } else {
                     themePopup.style.display = "block";
                     showThemeMenu = true;
+                    chrome.storage.sync.get('theme', function (data) {
+                        var theme = data.theme;
+                        displayCheckmark(theme);
+                    });
                 }
             });
 
             var lightThemeButton = document.getElementById("light-theme-button");
             lightThemeButton.addEventListener('click', function () {
                 setTheme(0);
-                lightThemeSelected();
+                displayCheckmark(0)
             });
 
             var darkThemeButton = document.getElementById("dark-theme-button");
             darkThemeButton.addEventListener('click', function () {
                 setTheme(1);
-                darkThemeSelected();
+                displayCheckmark(1)
             });
 
             var autoThemeButton = document.getElementById("auto-theme-button");
             autoThemeButton.addEventListener('click', function () {
                 setTheme(2);
-                followBrowserSelected();
+                displayCheckmark(2)
             });
 
             // Close menu on hash change or outside click
@@ -46,7 +50,7 @@ chrome.storage.sync.get(['themeModule'], function (result) {
                     showThemeMenu = false;
                 }
             });
-            
+
             themePopup.addEventListener('click', function (event) {
                 event.stopPropagation();
             });
@@ -58,22 +62,3 @@ chrome.storage.sync.get(['themeModule'], function (result) {
         });
     }
 });
-
-// Show the checkmark when the option is selected, and make sure the other checkmarks don't show
-function lightThemeSelected() {
-    document.getElementById('light-theme-checkmark').style.display = "block",
-    document.getElementById('follow-browser-checkmark').style.display = "none",
-    document.getElementById('dark-theme-checkmark').style.display = "none";
-}
-
-function darkThemeSelected() {
-    document.getElementById('dark-theme-checkmark').style.display = "block",
-    document.getElementById('follow-browser-checkmark').style.display = "none",
-    document.getElementById('light-theme-checkmark').style.display = "none";
-}
-
-function followBrowserSelected() {
-    document.getElementById('follow-browser-checkmark').style.display = "block",
-    document.getElementById('dark-theme-checkmark').style.display = "none",
-    document.getElementById('light-theme-checkmark').style.display = "none";
-}
