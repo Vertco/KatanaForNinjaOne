@@ -13,6 +13,14 @@ a {
     filter: saturate(.25);
 }
 
+#react-modal > div > div {
+    background-color: #efefefde !important;
+}
+
 .script-editor-container {
     filter: invert(1) hue-rotate(180deg) saturate(0.5) contrast(1.5);
+}
+
+#ninja-api {
+    background-color: #fff;
 }
