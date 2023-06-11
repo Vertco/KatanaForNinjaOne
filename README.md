@@ -8,7 +8,7 @@
 ---
 
 # Katana for NinjaOne
-This repository houses the Katana for NinjaOne Chromium extension.
+This repository houses the Katana for NinjaOne browser extension.
 
 The Katana extension adds dark theme support to NinjaOne aswell as adding a button to devices that sends the current device to a selected endpoint.
 From there you can integrate it into any program you want.
