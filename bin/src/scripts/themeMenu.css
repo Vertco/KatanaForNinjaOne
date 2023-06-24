@@ -21,3 +21,8 @@
 .css-theme_checkmark {
     align-items: center;
 }
+
+/* Remove padding in the application topbar for better theme button alignment */
+.css-59n016.eu2udwo8 {
+    padding-left: 0;
+}
