@@ -29,18 +29,24 @@ chrome.storage.sync.get(['themeModule'], function (result) {
             lightThemeButton.addEventListener('click', function () {
                 setTheme(0);
                 displayCheckmark(0)
+                themePopup.style.display = "none";
+                showThemeMenu = false;
             });
 
             var darkThemeButton = document.getElementById("dark-theme-button");
             darkThemeButton.addEventListener('click', function () {
                 setTheme(1);
                 displayCheckmark(1)
+                themePopup.style.display = "none";
+                showThemeMenu = false;
             });
 
             var autoThemeButton = document.getElementById("auto-theme-button");
             autoThemeButton.addEventListener('click', function () {
                 setTheme(2);
                 displayCheckmark(2)
+                themePopup.style.display = "none";
+                showThemeMenu = false;
             });
 
             // Close menu on hash change or outside click
