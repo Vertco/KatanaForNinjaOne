@@ -240,6 +240,10 @@ li {
     padding-bottom: 15px;
 }
 
+#save-defaults-buttons {
+    margin-bottom: 15px;
+}
+
 #popup {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);

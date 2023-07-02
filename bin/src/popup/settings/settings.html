@@ -78,28 +78,23 @@
                         <input class="textfield" id="webhookUrl" type="text" spellcheck="false"
                             placeholder="__MSG_INP_webhookURL__">
                     </div>
-                    <div>
-                        <ul>
-                            <li>
-                                <div class="hollow_button"><input type="file" id="import_button"
-                                        accept=".json">__MSG_BTN_import__</div>
-                            </li>
-                            <li>
-                                <button class="hollow_button" id="export_button"
-                                    type="button">__MSG_BTN_export__</button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div id="bottom-buttons">
-                <ul>
+                <ul id="save-defaults-buttons">
                     <li>
                         <button class="filled_button" id="save_button" type="button"><b>__MSG_BTN_save__</b></button>
                     </li>
                     <li>
-                        <button class="filled_button" id="defaults_button"
-                            type="button"><b>__MSG_BTN_defaults__</b></button>
+                        <button class="filled_button" id="defaults_button" type="button"><b>__MSG_BTN_defaults__</b></button>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="hollow_button"><input type="file" id="import_button" accept=".json">__MSG_BTN_import__</div>
+                    </li>
+                    <li>
+                        <button class="hollow_button" id="export_button" type="button">__MSG_BTN_export__</button>
                     </li>
                 </ul>
             </div>
