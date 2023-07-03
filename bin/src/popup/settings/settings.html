@@ -81,20 +81,34 @@
                 </div>
             </div>
             <div id="bottom-buttons">
-                <ul id="save-defaults-buttons">
-                    <li>
-                        <button class="filled_button" id="save_button" type="button"><b>__MSG_BTN_save__</b></button>
-                    </li>
-                    <li>
-                        <button class="filled_button" id="defaults_button" type="button"><b>__MSG_BTN_defaults__</b></button>
-                    </li>
-                </ul>
                 <ul>
                     <li>
-                        <div class="hollow_button"><input type="file" id="import_button" accept=".json">__MSG_BTN_import__</div>
+                        <button class="filled_button_icon" id="save_button" type="button" title="__MSG_BTN_save__">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.75 3h-1A2.75 2.75 0 0 0 3 5.75v12.5A2.75 2.75 0 0 0 5.75 21H6v-6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 15v6h.25A2.75 2.75 0 0 0 21 18.25V8.286a3.25 3.25 0 0 0-.952-2.299l-2.035-2.035A3.25 3.25 0 0 0 15.75 3v4.5a2.25 2.25 0 0 1-2.25 2.25H9A2.25 2.25 0 0 1 6.75 7.5V3Z" fill="currentcolor"/><path d="M14.25 3v4.5a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75V3h6ZM16.5 21v-6a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0-.75.75v6h9Z" fill="currentcolor"/>
+                            </svg>
+                        </button>
                     </li>
                     <li>
-                        <button class="hollow_button" id="export_button" type="button">__MSG_BTN_export__</button>
+                        <button class="filled_button_icon" id="defaults_button" type="button" title="__MSG_BTN_defaults__">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.207 2.543a1 1 0 0 1 0 1.414L5.414 5.75h7.836a8 8 0 1 1-8 8 1 1 0 1 1 2 0 6 6 0 1 0 6-6H5.414l1.793 1.793a1 1 0 0 1-1.414 1.414l-3.5-3.5a1 1 0 0 1 0-1.414l3.5-3.5a1 1 0 0 1 1.414 0Z" fill="currentcolor"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="hollow_button_icon"><input type="file" id="import_button" accept=".json" title="__MSG_BTN_import__">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.25 4.5a.75.75 0 0 1 .743.648L22 5.25v13.5a.75.75 0 0 1-1.493.102l-.007-.102V5.25a.75.75 0 0 1 .75-.75Zm-9.04 1.887.083-.094a1 1 0 0 1 1.32-.083l.094.083 4.997 4.998a1 1 0 0 1 .083 1.32l-.083.093-4.996 5.004a1 1 0 0 1-1.499-1.32l.083-.094L15.581 13H3a1 1 0 0 1-.993-.883L2 12a1 1 0 0 1 .883-.993L3 11h12.584l-3.291-3.293a1 1 0 0 1-.083-1.32l.083-.094-.083.094Z" fill="currentcolor"/>
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="filled_button_icon" id="export_button" type="button" title="__MSG_BTN_export__">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.75 4.504a.75.75 0 0 1 .743.648l.007.102v13.499a.75.75 0 0 1-1.493.101L2 18.753v-13.5a.75.75 0 0 1 .75-.75Zm12.46 1.883.083-.094a1 1 0 0 1 1.32-.083l.094.083 4.997 4.998a1 1 0 0 1 .083 1.32l-.083.093-4.996 5.004a1 1 0 0 1-1.499-1.32l.083-.094L18.581 13H6a1 1 0 0 1-.993-.883L5 12a1 1 0 0 1 .883-.993L6 11h12.584l-3.291-3.293a1 1 0 0 1-.083-1.32l.083-.094-.083.094Z" fill="currentcolor"/>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
             </div>

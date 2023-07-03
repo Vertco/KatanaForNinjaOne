@@ -240,12 +240,77 @@ li {
     padding-left: 7.5px;
 }
 
-#bottom-buttons {
-    padding-bottom: 15px;
+/* Style the function buttons (save/defaults/import/export) */
+.filled_button_icon {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #000000;
+    font-feature-settings: "cv05";
+    box-sizing: border-box;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    user-select: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #337ab7;
+    color: #ffffff;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    background-color: #337ab7;
 }
 
-#save-defaults-buttons {
-    margin-bottom: 15px;
+.filled_button_icon:hover {
+    background-color: #2f70a8;
+}
+
+.hollow_button_icon {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-feature-settings: "cv05";
+    box-sizing: border-box;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    user-select: none;
+    outline: none;
+    padding: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #337ab7;
+    color: #ffffff;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    background-color: #337ab7;
+    position: relative;
+}
+
+.hollow_button_icon:hover {
+    background-color: #2f70a8;
+}
+
+.hollow_button_icon input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
 #popup {
