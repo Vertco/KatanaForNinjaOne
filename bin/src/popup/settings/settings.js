@@ -157,6 +157,11 @@ function confirmPopup(message, confirmColor, callback) {
   popup.style.display = "flex";
 }
 
+//Function | Open the file options menu
+function openFileOptions() {
+  document.getElementById("fileOptions").classList.toggle("show");
+}
+
 // Function | Replace import button
 function replaceImportButton() {
   if (typeof browser !== "undefined") {

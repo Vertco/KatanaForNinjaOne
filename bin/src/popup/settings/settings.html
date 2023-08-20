@@ -33,12 +33,33 @@
     <div class="content">
         <div class="content-header">
             <img id="logo" height="60" src="/popup/media/Katana_logo_Light.svg">
+
             <a href="/popup/home/home.html"><svg width="24" height="24" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m 20.485213,3.5147871 c 4.686383,4.6863827 4.686383,12.2840419 0,16.9704259 -4.686384,4.686383 -12.2840432,4.686383 -16.9704259,0 -4.6863829,-4.686384 -4.6863829,-12.2840432 0,-16.9704259 4.6863827,-4.6863829 12.2840419,-4.6863829 16.9704259,0 z M 19.212431,4.787569 A 10.199918,10.199918 0 1 0 4.787569,19.212431 10.199918,10.199918 0 0 0 19.212431,4.787569 Z m -2.969825,2.9698244 a 0.8999927,0.8999927 0 0 1 0,1.2727824 L 13.272782,12 l 2.969824,2.969825 a 0.8999927,0.8999927 0 0 1 -1.272781,1.272781 L 12,13.272782 9.0301758,16.242606 A 0.8999927,0.8999927 0 0 1 7.7573934,14.969825 L 10.727218,12 7.7573934,9.0301758 A 0.89999307,0.89999307 0 0 1 9.0301758,7.7573934 L 12,10.727218 14.969825,7.7573934 a 0.8999927,0.8999927 0 0 1 1.272781,0 z"
+                    fill="currentColor" id="path3268" />
+            </svg></a>
+
+            <a href="" class="file-button"><svg width="24" height="24" viewBox="0 0 24 24" 
                     xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="m 20.485213,3.5147871 c 4.686383,4.6863827 4.686383,12.2840419 0,16.9704259 -4.686384,4.686383 -12.2840432,4.686383 -16.9704259,0 -4.6863829,-4.686384 -4.6863829,-12.2840432 0,-16.9704259 4.6863827,-4.6863829 12.2840419,-4.6863829 16.9704259,0 z M 19.212431,4.787569 A 10.199918,10.199918 0 1 0 4.787569,19.212431 10.199918,10.199918 0 0 0 19.212431,4.787569 Z m -2.969825,2.9698244 a 0.8999927,0.8999927 0 0 1 0,1.2727824 L 13.272782,12 l 2.969824,2.969825 a 0.8999927,0.8999927 0 0 1 -1.272781,1.272781 L 12,13.272782 9.0301758,16.242606 A 0.8999927,0.8999927 0 0 1 7.7573934,14.969825 L 10.727218,12 7.7573934,9.0301758 A 0.89999307,0.89999307 0 0 1 9.0301758,7.7573934 L 12,10.727218 14.969825,7.7573934 a 0.8999927,0.8999927 0 0 1 1.272781,0 z"
-                        fill="currentColor" id="path3268" />
-                </svg></a>
+                    <path d="M12 2v6a2 2 0 0 0 2 2h4.92c-.596.22-1.144.554-1.558.97l-6.05 6.092a2.815 2.815 0 0 0-.728 1.279l-.525 2.03A2.082 2.082 0 0 0 10.3 22H5.5A1.5 1.5 0 0 1 4 20.5v-17A1.5 1.5 0 0 1 5.5 2H12Z" fill="currentColor"/>
+                    <path d="M13.5 2.5V8a.5.5 0 0 0 .5.5h5.5l-6-6ZM12.196 17.572l5.902-5.902a2.285 2.285 0 1 1 3.233 3.232l-5.903 5.902a2.684 2.684 0 0 1-1.247.707l-1.831.457a1.087 1.087 0 0 1-1.318-1.318l.457-1.83c.118-.473.362-.904.707-1.248Z" fill="currentColor" id="path3268"/>
+            </svg></a>
+
+            <div class="file-options" id="fileOptions">
+                <ul>
+                    <li>
+                        <div class="hollow_button"><input type="file" id="import_button"
+                                accept=".json">__MSG_BTN_import__</div>
+                    </li>
+                    <li>
+                        <button class="hollow_button" id="export_button"
+                            type="button">__MSG_BTN_export__</button>
+                    </li>
+                </ul>
+            </div>
+
         </div>
         <div id="settings-container">
             <label class="checkbox-container"><svg width="24" height="24" viewBox="0 0 24 24"
@@ -78,18 +99,11 @@
                         <input class="textfield" id="webhookUrl" type="text" spellcheck="false"
                             placeholder="__MSG_INP_webhookURL__">
                     </div>
+                    <!--This section should be removed and moved to the new section-->
                     <div>
-                        <ul>
-                            <li>
-                                <div class="hollow_button"><input type="file" id="import_button"
-                                        accept=".json">__MSG_BTN_import__</div>
-                            </li>
-                            <li>
-                                <button class="hollow_button" id="export_button"
-                                    type="button">__MSG_BTN_export__</button>
-                            </li>
-                        </ul>
+
                     </div>
+                    <!--Until this bit-->
                 </div>
             </div>
             <div id="bottom-buttons">

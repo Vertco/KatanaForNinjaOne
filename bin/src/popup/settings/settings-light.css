@@ -21,6 +21,17 @@ body {
     border-color: #b62e3c;
 }
 
+.file-button {
+    margin-right: 10px;
+}
+
+.file-options {
+    display: none;
+    position: absolute;
+    margin: none;
+    padding: none;
+}
+
 .functions {
     padding-top: 15px;
 }
