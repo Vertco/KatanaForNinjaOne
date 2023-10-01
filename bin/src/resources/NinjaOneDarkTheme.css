@@ -5,15 +5,17 @@ html {
 img,
 picture,
 video,
-path {
+path,
+#ace-editor {
     filter: invert(100%) hue-rotate(180deg) saturate(.6);
 }
 
 a {
     filter: saturate(.25);
+    color: #6e6d7a !important;
 }
 
-#react-modal > div > div {
+#react-modal>div>div {
     background-color: #efefefde !important;
 }
 
@@ -22,5 +24,33 @@ a {
 }
 
 #ninja-api {
+    background-color: #fff;
+}
+
+aside#application-sidebar {
+    background-color: #f0f0f0;
+}
+
+#application-sidebar>nav>div>a.active,
+#application-sidebar>nav>div>a:hover,
+#favorite>div>button.active,
+#favorite>div>button:hover,
+#favorite>div>nav>div>a:hover,
+#recent>div>button.active,
+#recent>div>button:hover,
+#recent>div>nav>div>a:hover {
+    background-color: #e8e8ea;
+}
+
+#favorite > div > button > span,
+#recent > div > button > span {
+    color: #6e6d7a !important;
+}
+
+.el8j93p0 {
+    border-left: 1px solid #e8e8ea !important;
+}
+
+#page-wrapper {
     background-color: #fff;
 }
