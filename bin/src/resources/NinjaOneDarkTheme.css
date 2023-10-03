@@ -27,7 +27,9 @@ a {
     background-color: #fff;
 }
 
-aside#application-sidebar {
+aside#application-sidebar,
+.theme-bg-color,
+#react-portal > div > div > div > div > nav {
     background-color: #f0f0f0;
 }
 
