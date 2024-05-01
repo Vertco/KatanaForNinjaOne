@@ -72,3 +72,13 @@ document.getElementById('logo').addEventListener('click', function () {
     })
   }
 });
+
+// Use options page if browser is Arc
+document.querySelector("#settings_button").addEventListener("click", function () {
+  console.log("Settings button clicked")
+  if (chrome.runtime.openOptionsPage) {
+    chrome.runtime.openOptionsPage();
+  } else {
+    window.open(chrome.runtime.getURL("popup/settings/settings.html.html"));
+  }
+});
