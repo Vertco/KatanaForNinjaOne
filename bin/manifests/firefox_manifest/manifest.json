@@ -34,13 +34,12 @@
         "resources/*"
       ],
       "matches": [
-        "https://eu.ninjarmm.com/*",
         "https://*.rmmservice.eu/*",
-        "https://app.ninjarmm.com/*",
+        "https://*.ninjarmm.com",
+        "https://*.ninjarmm.net",
         "https://*.rmmservice.com/*",
-        "https://oc.ninjarmm.com/*",
+        "https://*.rmmservice.net",
         "https://*.rmmservice.com.au/*",
-        "https://ca.ninjarmm.com/*",
         "https://*.rmmservice.ca/*"
       ]
     }
@@ -48,13 +47,12 @@
   "content_scripts": [
     {
       "matches": [
-        "https://eu.ninjarmm.com/*",
         "https://*.rmmservice.eu/*",
-        "https://app.ninjarmm.com/*",
+        "https://*.ninjarmm.com",
+        "https://*.ninjarmm.net",
         "https://*.rmmservice.com/*",
-        "https://oc.ninjarmm.com/*",
+        "https://*.rmmservice.net",
         "https://*.rmmservice.com.au/*",
-        "https://ca.ninjarmm.com/*",
         "https://*.rmmservice.ca/*"
       ],
       "js": [
