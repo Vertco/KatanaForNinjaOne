@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "manifest_version": 3,
   "default_locale": "en",
   "description": "__MSG_appDesc__",
@@ -21,6 +21,10 @@
   },
   "background": {
     "service_worker": "scripts/background.js"
+  },
+  "options_ui": {
+    "page": "popup/settings/settings.html",
+    "open_in_tab": false
   },
   "web_accessible_resources": [
     {

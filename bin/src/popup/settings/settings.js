@@ -157,24 +157,6 @@ function confirmPopup(message, confirmColor, callback) {
   popup.style.display = "flex";
 }
 
-// Function | Replace import button
-function replaceImportButton() {
-  if (typeof browser !== "undefined") {
-    // Firefox-specific code
-    const importButton = document.getElementById("import_button");
-    const importPlaceholder = document.createElement("button");
-    importPlaceholder.setAttribute("class", "hollow_button");
-    importPlaceholder.setAttribute("id", "import_placeholder");
-    importPlaceholder.setAttribute("type", "button");
-    importPlaceholder.textContent = chrome.i18n.getMessage("BTN_import");
-    importButton.parentNode.parentNode.replaceChild(importPlaceholder, importButton.parentNode);
-    document.getElementById('import_placeholder').addEventListener('click', function () {
-      show_notification(chrome.i18n.getMessage("NOT_firefox"), '#fac905', '#3b3b3b');
-      setTimeout(hide_notification, 1500);
-    });
-  }
-}
-
 // Load and set value of all settings fields
 loadSettings()
 
@@ -223,9 +205,4 @@ document.getElementById('triggerModule').addEventListener('click', function () {
 // Hide notification when clicked on
 document.getElementById('notification').addEventListener('click', function () {
   hide_notification()
-});
-
-// Replace import button in FireFox
-document.addEventListener("DOMContentLoaded", function (event) {
-  replaceImportButton();
 });
