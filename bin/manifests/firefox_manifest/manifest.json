@@ -39,10 +39,10 @@
       ],
       "matches": [
         "https://*.rmmservice.eu/*",
-        "https://*.ninjarmm.com",
-        "https://*.ninjarmm.net",
+        "https://*.ninjarmm.com/*",
+        "https://*.ninjarmm.net/*",
         "https://*.rmmservice.com/*",
-        "https://*.rmmservice.net",
+        "https://*.rmmservice.net/*",
         "https://*.rmmservice.com.au/*",
         "https://*.rmmservice.ca/*"
       ]
@@ -52,10 +52,10 @@
     {
       "matches": [
         "https://*.rmmservice.eu/*",
-        "https://*.ninjarmm.com",
-        "https://*.ninjarmm.net",
+        "https://*.ninjarmm.com/*",
+        "https://*.ninjarmm.net/*",
         "https://*.rmmservice.com/*",
-        "https://*.rmmservice.net",
+        "https://*.rmmservice.net/*",
         "https://*.rmmservice.com.au/*",
         "https://*.rmmservice.ca/*"
       ],

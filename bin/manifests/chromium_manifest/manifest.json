@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 3,
   "default_locale": "en",
   "description": "__MSG_appDesc__",
@@ -33,10 +33,10 @@
       ],
       "matches": [
         "https://*.rmmservice.eu/*",
-        "https://*.ninjarmm.com",
-        "https://*.ninjarmm.net",
+        "https://*.ninjarmm.com/*",
+        "https://*.ninjarmm.net/*",
         "https://*.rmmservice.com/*",
-        "https://*.rmmservice.net",
+        "https://*.rmmservice.net/*",
         "https://*.rmmservice.com.au/*",
         "https://*.rmmservice.ca/*"
       ]
@@ -46,10 +46,10 @@
     {
       "matches": [
         "https://*.rmmservice.eu/*",
-        "https://*.ninjarmm.com",
-        "https://*.ninjarmm.net",
+        "https://*.ninjarmm.com/*",
+        "https://*.ninjarmm.net/*",
         "https://*.rmmservice.com/*",
-        "https://*.rmmservice.net",
+        "https://*.rmmservice.net/*",
         "https://*.rmmservice.com.au/*",
         "https://*.rmmservice.ca/*"
       ],
