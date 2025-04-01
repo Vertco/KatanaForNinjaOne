@@ -5,12 +5,12 @@ var showThemeMenu = false;
 const themeSwitcher = document.createElement("div");
 themeSwitcher.innerHTML = `<div id="theme-button" aria-expanded="false" aria-haspopup="true" aria-label="menu-button--menu"> <button type="button"
         class="button-theme"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user"
-            class="svg-inline--fa fa-user fa-w-14 fa-fw css-jsh9fm eu2udwo6" role="img"
+            class="svg-inline--fa fa-user fa-w-14 fa-fw css-jsh9fm eu2udwo7" role="img"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-2V4a8 8 0 1 1 0 16Z"
                 fill="currentColor" />
         </svg></button></div>
-<div id="theme-menu" role="menu" aria-labelledby="menu-button--menu" tabindex="-1" class="css-theme_button e7jwh8x0"
+<div id="theme-menu" role="menu" aria-labelledby="menu-button--menu" tabindex="-1" class="css-theme_button"
     style="display: none;">
     <div class="css-5m14zq eu2udwo8">
         <div data-test-id="styled-text-div" color="[object Object]" class="css-41l7xm ej570i0"><span>Display theme</span></div>
