@@ -4,7 +4,7 @@ loadTheme()
 // Add theme switcher
 chrome.storage.sync.get(['themeModule'], function (result) {
     if (result.themeModule) {
-        waitForElm('#application-topbar > div').then((element) => {
+        waitForElm('#application-topbar > ul').then((element) => {
             element.prepend(themeSwitcher);
 
             var themeButton = document.getElementById("theme-button");
