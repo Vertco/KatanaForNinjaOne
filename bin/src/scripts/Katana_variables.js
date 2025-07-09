@@ -3,7 +3,7 @@ var themeModule_enabled = true;
 var triggerModule_enabled = true;
 var showThemeMenu = false;
 const themeSwitcher = document.createElement("div");
-themeSwitcher.innerHTML = `<div id="theme-button" aria-expanded="false" aria-haspopup="true" aria-label="menu-button--menu"> <button type="button"
+themeSwitcher.innerHTML = `<li id="theme-button" aria-expanded="false" aria-haspopup="true" aria-label="menu-button--menu"> <button type="button"
         class="button-theme"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user"
             class="svg-inline--fa fa-user fa-w-14 fa-fw" role="img"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ themeSwitcher.innerHTML = `<div id="theme-button" aria-expanded="false" aria-has
                 </svg> </div>
         </div>
     </div>
-</div>`;
+</li>`;
 themeSwitcher.id = "theme_switcher";
 themeSwitcher.classList.add("button-theme-div");
 

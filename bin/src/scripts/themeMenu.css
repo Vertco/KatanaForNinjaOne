@@ -1,8 +1,8 @@
 .css-theme_button {
     outline: none;
     position: absolute;
-    top: 44px;
-    right: 192px;
+    top: 42px;
+    right: 100px;
     padding: 4px 4px 8px;
     margin-top: 2px;
     min-width: 320px;
@@ -17,7 +17,7 @@
 .css-menu-item:hover {
     background-color: rgb(239, 241, 243);
     cursor: pointer;
-    color: rgb(21, 22, 23);
+
     border-radius: 4px;
     outline: none;
 }
