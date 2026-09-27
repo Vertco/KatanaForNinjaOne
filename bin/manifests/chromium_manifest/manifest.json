@@ -11,10 +11,10 @@
     "storage"
   ],
   "icons": {
-    "16": "icons/Katana_Favicon_16.png",
-    "32": "icons/Katana_Favicon_32.png",
-    "48": "icons/Katana_Favicon_48.png",
-    "128": "icons/Katana_Favicon_128.png"
+    "16": "icons/Trigger_Favicon_16.png",
+    "32": "icons/Trigger_Favicon_32.png",
+    "48": "icons/Trigger_Favicon_48.png",
+    "128": "icons/Trigger_Favicon_128.png"
   },
   "action": {
     "default_popup": "popup/home/home.html"
@@ -57,10 +57,10 @@
       ],
       "js": [
         "lib/jquery.min.js",
-        "scripts/Katana_variables.js",
-        "scripts/Katana_functions.js",
-        "scripts/Katana_trigger_button.js",
-        "scripts/Katana_theme_button.js"
+        "scripts/Trigger_variables.js",
+        "scripts/Trigger_functions.js",
+        "scripts/Trigger_trigger_button.js",
+        "scripts/Trigger_theme_button.js"
       ],
       "css": [
         "scripts/themeMenu.css"
