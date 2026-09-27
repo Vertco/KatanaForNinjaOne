@@ -31,7 +31,6 @@ chrome.storage.sync.get(["debug"]).then((result) => {
 // Save data when clicking on save button
 document.getElementById('save_button').addEventListener('click', function () {
   chrome.storage.sync.set({
-    themeModule: document.getElementById("themeModule").checked,
     triggerModule: document.getElementById("triggerModule").checked,
     buttonText: document.getElementById("buttonText").value,
     warningText: document.getElementById("warningText").value,

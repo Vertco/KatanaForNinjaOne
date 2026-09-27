@@ -1,8 +1,6 @@
 {
   "buttonText": "Button",
   "debug": false,
-  "theme": 2,
-  "themeModule": true,
   "triggerModule": true,
   "warningText": "Sent request for",
   "webhookUrl": "https://example.com/api/webhook/123abcABC"

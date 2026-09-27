@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "Katana per NinjaOne",
+        "message": "Trigger per NinjaOne",
         "description": "The name of the extension, displayed in the web store."
     },
     "appDesc": {
@@ -30,9 +30,6 @@
     "INP_webhookURL": {
         "message": "URL Webhook",
         "description": "The name and placeholder of the input field."
-    },
-    "LAB_themeModule": {
-        "message": "Selettore di temi"
     },
     "LAB_triggerModule": {
         "message": "Pulsante di attivazione"

@@ -1,9 +1,7 @@
 // Variables
-const moduleNames = ["themeModule", "triggerModule"];
+const moduleNames = ["triggerModule"];
 const defaultSettings = {
-    themeModule: true,
     triggerModule: true,
-    theme: 0,
     buttonText: 'Button',
     warningText: 'Send HTTP request for',
     webhookUrl: 'https://example.com/api/webhook',
