@@ -1,4 +1,4 @@
-![Large_promo_tile](https://user-images.githubusercontent.com/47614276/221411640-0e8a1443-e33f-434a-8a81-b97ca8402d5c.png)
+<img width="1400" height="560" alt="GithubBanner" src="https://github.com/user-attachments/assets/2d93a4a6-fc82-4fcd-9b51-b9d23b7956e5" />
 <p align="center">
   <a href="https://www.paypal.com/donate/?hosted_button_id=PLM7Q4RRJK48N" target="_blank">
     <img src="https://img.shields.io/badge/Donate-PayPal-green.svg"/>
