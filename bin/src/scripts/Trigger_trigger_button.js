@@ -35,7 +35,7 @@ function addTriggerButton(deviceType) {
                 }
                 chrome.storage.sync.get(["buttonText"]).then((result) => {
                     $(navSelector).append(
-                        `<a class="css-10b66mg e1x3vm0l0" id="requestButtonContainer"><div height="100%" class="css-1qjsmj2 eu2udwo7"><div class="css-11r2ks8 e1x3vm0l2">` + result.buttonText + ` <sup>Trigger</div></div></a>`
+                        `<a class="css-1q01osz" id="requestButtonContainer"><div height="100%" class="css-ul214x"><div class="StyledText css-1ulgvh2">` + result.buttonText + ` <sup>Trigger</div></div></a>`
                     );
                     console.debug(`Inserted button with id ${deviceId}`);
                 });
