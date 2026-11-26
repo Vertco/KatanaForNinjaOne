@@ -22,7 +22,8 @@ Follow the link for your browser for an article on how to sideload a extension:<
 [Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading)<br>
 [Google Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)<br>
 [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#extensions)
-
+> [!NOTE]
+> Trigger is independently developed by Vertc and is not affiliated with, sponsored by, or endorsed by NinjaOne.
 ---
 # Guides
 Below are some guides to help you get started with the extension.
